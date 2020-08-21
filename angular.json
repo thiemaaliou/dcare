@@ -32,7 +32,8 @@
               "src/assets/css/slick.css",
               "src/assets/css/default.css",
               "src/assets/css/style.css",
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/css/general.css"
             ],
             "scripts": [
               "src/assets/js/vendor/modernizr-3.6.0.min.js",

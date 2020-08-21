@@ -1,0 +1,37 @@
+
+:root {
+  --bleu: #4e66a9;
+  --orange2: #f4901f;
+  --noir: #000;
+  --rouge: #cf3b3b;
+  --orange: #ff6600;
+}
+
+.main-btn{
+    border: 2px solid var(--rouge);
+    background-color: var(--rouge);
+}
+.contact-us-area .contact-overlay {
+    background-color: var(--orange);
+}
+.contact-us-area .contact-overlay .contact-details .contact-form-area .input-box button {
+  border-color: var(--rouge);
+  background: var(--rouge);
+}
+.services-content a:hover{
+  background: var(--orange2) !important;
+}
+.case-studies-area .single-case-studies{
+  height: 430px;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}
+.why-choose-area .single-choose .icon-box {
+    height: 115px;
+    width: 115px;
+    line-height: 136px;
+}
+.why-choose-area .single-choose .icon-box i{
+  font-size: 40px;
+}

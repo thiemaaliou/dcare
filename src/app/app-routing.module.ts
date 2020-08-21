@@ -21,11 +21,12 @@ import { ShopdetailComponent } from './components/pages/shopdetail/shopdetail.co
 import { ShopComponent } from './components/pages/shop/shop.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 
 const routes: Routes = [
   {
-    path:'',component:HomeComponent 
+    path:'',component:HomeComponent
   },
   {
     path:'home-2',component:Home2Component
@@ -83,6 +84,9 @@ const routes: Routes = [
   },
   {
     path:'team-detail',component:TeamdetailComponent
+  },
+  {
+    path:'register',component: RegisterComponent
   },
   {
     path:'**',component:ErrorComponent

@@ -35,6 +35,7 @@ import { ShopComponent } from './components/pages/shop/shop.component';
 import { ShopdetailComponent } from './components/pages/shopdetail/shopdetail.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
+import { RegisterComponent } from './components/pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.co
     ShopComponent,
     ShopdetailComponent,
     TeamComponent,
-    TeamdetailComponent
+    TeamdetailComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
