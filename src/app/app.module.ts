@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,12 @@ import { ShopdetailComponent } from './components/pages/shopdetail/shopdetail.co
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { AuthService } from './services/auth.service';
+import { FocusDirective } from './directive/focus.directive';
+import { ChangeInputDirective } from './directive/change-input.directive';
+import { HttpClientModule } from '@angular/common/http';
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
+import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -72,13 +79,19 @@ import { RegisterComponent } from './components/pages/register/register.componen
     ShopdetailComponent,
     TeamComponent,
     TeamdetailComponent,
-    RegisterComponent
+    RegisterComponent,
+    ChangePasswordComponent,
+    FocusDirective,
+    ChangeInputDirective
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    SweetAlert2Module.forRoot()
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

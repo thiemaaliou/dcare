@@ -18,7 +18,7 @@ declare let $: any;
 export class AppComponent implements OnInit {
   location: any;
   routerSubscription: any;
-
+  noScrollRoutes = ["/#employeur", "/#employe", "/#allocataire"];
   constructor(private router: Router) {
   }
 
@@ -30,19 +30,23 @@ export class AppComponent implements OnInit {
       this.router.events
       .subscribe((event) => {
           if ( event instanceof NavigationStart ) {
+            if(this.noScrollRoutes.indexOf(event.url) == -1){
               $('.preloader').fadeIn('slow');
+            }
           }
       });
       this.routerSubscription = this.router.events
       .pipe(filter(event => event instanceof NavigationEnd || event instanceof NavigationCancel))
       .subscribe(event => {
-          $.getScript('assets/js/main.js');
-          $('.preloader').fadeOut('slow');
-          this.location = this.router.url;
-          if (!(event instanceof NavigationEnd)) {
-              return;
-          }
-          window.scrollTo(0, 0);
+        if(this.noScrollRoutes.indexOf(this.router.url) == -1){
+            $.getScript('assets/js/main.js');
+            $('.preloader').fadeOut('slow');
+            this.location = this.router.url;
+            if (!(event instanceof NavigationEnd)) {
+                return;
+            }
+            window.scrollTo(0, 0);
+        }
       });
   }
 }

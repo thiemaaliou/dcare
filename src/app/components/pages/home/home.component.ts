@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
        title: "IPRES Sénégal<br> Votre solution",
        subTitle: "L'Institution de Prévoyance Retraites du Sénégal",
        description: "L'institution de Prévoyance Retraite du Sénégal (I.P.RE.S.) est un organisme de droit privé placé sous la tutelle technique et financière de l'Etat.",
-       img: "assets/images/banner-bg-1.1.png",
+       img: "assets/images/1-04.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      },
@@ -19,15 +19,15 @@ export class HomeComponent implements OnInit {
        title: "Caisse de sécurité <br>sociale",
        subTitle: "Caisse de sécurité sociale",
        description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
-       img: "assets/images/banner-bg-1.2.png",
+       img: "assets/images/1-02.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      },
      {
        title: "Paiement en ligne <br> IPRES CSS",
-       subTitle: "IPRES & CSS",
+       subTitle: "Paiement sécurisé et rapide",
        description: "Elle dispose d'agences régionales, de centres de protection maternelle et infantile, de cliniques et de plannings familiaux. L'Institution de Prévoyance Retraites du Sénégal (IPRES) gère le régime national obligatoire d'assurance vieillesse",
-       img: "assets/images/banner-bg-1.3.png",
+       img: "assets/images/1-01.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      }

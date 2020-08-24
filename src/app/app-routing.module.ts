@@ -22,6 +22,7 @@ import { ShopComponent } from './components/pages/shop/shop.component';
 import { TeamComponent } from './components/pages/team/team.component';
 import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
+import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 
 
 const routes: Routes = [
@@ -87,6 +88,9 @@ const routes: Routes = [
   },
   {
     path:'register',component: RegisterComponent
+  },
+  {
+    path:'activate/:key',component: ChangePasswordComponent
   },
   {
     path:'**',component:ErrorComponent
