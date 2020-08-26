@@ -1,0 +1,7 @@
+.register-btn{
+  border: 1px solid #9999;
+  font-weight: 700;
+}
+.navigation:not(.sticky){
+  top: 0 !important;
+}

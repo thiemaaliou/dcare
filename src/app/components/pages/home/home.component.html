@@ -1,48 +1,16 @@
 <app-header></app-header>
-<!--====== BANNER PART START ======-->
+
 <div class="banner-active">
-    <div class="single-banner bg_cover" style="background-image: url(assets/images/banner-bg-1.1.jpg);">
+    <div class="single-banner bg_cover" *ngFor="let slide of slideData" [ngStyle]="{'background-image': 'url('+slide.img+')', 'background-repeat': 'no-repeat'}">
         <div class="banner-overlay">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9">
                         <div class="banner-content">
-                            <span data-animation="fadeInLeft" data-delay="0.5s">IT Business Consulting</span>
-                            <h1 data-animation="fadeInLeft" data-delay="0.9s" class="title">Best IT Soluations <br>Provider Agency</h1>
-                            <p data-animation="fadeInLeft" data-delay="1.3s">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremda tium totam rem aperiam eaque ipsa quae ab illo inventore veritatis </p>
-                            <a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" routerLink='/services'>Our Services <i class="fal fa-long-arrow-right"></i></a>
-                        </div> <!-- banner content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-    </div>
-    <div class="single-banner bg_cover" style="background-image: url(assets/images/banner-bg-1.2.jpg);">
-        <div class="banner-overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="banner-content">
-                            <span data-animation="fadeInLeft" data-delay="0.5s">IT Business Consulting</span>
-                            <h1 data-animation="fadeInLeft" data-delay="0.9s" class="title">Best IT Soluations <br>Provider Agency</h1>
-                            <p data-animation="fadeInLeft" data-delay="1.3s">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremda tium totam rem aperiam eaque ipsa quae ab illo inventore veritatis </p>
-                            <a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" routerLink='/services'>Our Services <i class="fal fa-long-arrow-right"></i></a>
-                        </div> <!-- banner content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
-    </div>
-    <div class="single-banner bg_cover" style="background-image: url(assets/images/banner-bg-1.3.jpg);">
-        <div class="banner-overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="banner-content">
-                            <span data-animation="fadeInLeft" data-delay="0.5s">IT Business Consulting</span>
-                            <h1 data-animation="fadeInLeft" data-delay="0.9s" class="title">Best IT Soluations <br>Provider Agency</h1>
-                            <p data-animation="fadeInLeft" data-delay="1.3s">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremda tium totam rem aperiam eaque ipsa quae ab illo inventore veritatis </p>
-                            <a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" routerLink='/services'>Our Services <i class="fal fa-long-arrow-right"></i></a>
+                            <span data-animation="fadeInLeft" data-delay="0.5s">{{slide?.subTitle}}</span>
+                            <h1 data-animation="fadeInLeft" data-delay="0.9s" class="title" [innerHTML]="slide.title"></h1>
+                            <p data-animation="fadeInLeft" data-delay="1.3s">{{slide?.description}} </p>
+                            <a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" [routerLink]='slide?.btnUrl'>{{slide?.btnText}} <i class="fal fa-long-arrow-right"></i></a>
                         </div> <!-- banner content -->
                     </div>
                 </div> <!-- row -->
@@ -50,20 +18,19 @@
         </div>
     </div>
 </div>
-<!--====== BANNER PART ENDS ======-->
-<!--====== WHO WE ARE PART START ======-->
+
 <div class="who-we-are-area pt-110 pb-120">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
                 <div class="section-title">
-                    <span>who we are</span>
-                    <h2 class="title">We Work Hard Play Hard Explore Creative Mmind</h2>
+                    <span>Notre Mission</span>
+                    <h2 class="title">Pour vous servir au mieux</h2>
                 </div> <!-- section title -->
             </div>
             <div class="col-lg-6 offset-lg-1 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0s">
                 <div class="section-title">
-                    <p>Perspiciatis unde omnis iste natus error sit voluptatem accusantium dolorem-quelaudantium, totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quiavoluptas sit aspernatur aut odit aut fugit, sed quia quuntur magni dolores eos ratione voluptatem sequi nesciunt eque porroe. </p>
+                    <p>Avec comme mission principale la gestion du régime de sécurité sociale institué par l’Etat du Sénégal en faveur des travailleurs salariés et assimilés et des retraités, nous avons respectivement pour rôle de recouvrer les cotisations des personnes assujetties et de les redistribuer sous forme de prestations techniques (pensions, allocations familiales, assurance vieillesse...) et d’assurer le service d’une pension ou allocation de retraite aux anciens salariés. </p>
                 </div> <!-- section title -->
             </div>
         </div>
@@ -71,15 +38,15 @@
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
                 <div class="what-we-do-item text-center mt-30">
                     <i class="fal fa-laptop-code"></i>
-                    <h5 class="title">IT Soluations</h5>
-                    <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
+                    <h5 class="title">Travaillez en sécurité</h5>
+                    <p>Accidents du travail et les maladies professionnelles</p>
                     <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
                 <div class="what-we-do-item text-center mt-30">
                     <i class="fal fa-fingerprint"></i>
-                    <h5 class="title">Security System</h5>
+                    <h5 class="title">Prestations familiales</h5>
                     <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
                     <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
@@ -87,7 +54,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
                 <div class="what-we-do-item text-center mt-30">
                     <i class="fal fa-chalkboard"></i>
-                    <h5 class="title">Web Development</h5>
+                    <h5 class="title">Vieillesse et Retraites</h5>
                     <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
                     <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
@@ -95,8 +62,8 @@
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="2s" data-wow-delay="0s">
                 <div class="what-we-do-item text-center mt-30">
                     <i class="fal fa-database"></i>
-                    <h5 class="title">Database Security</h5>
-                    <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
+                    <h5 class="title">Prenez votre retraite</h5>
+                    <p>En toute quietude en vous ayant souscrire a IPRES</p>
                     <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
@@ -109,8 +76,7 @@
         <img src="assets/images/what-we-are-shape-2.png" alt="shape">
     </div>
 </div>
-<!--====== WHO WE ARE PART ENDS ======-->
-<!--====== SOLUTION PART START ======-->
+
 <div class="solution-area bg_cover" style="background-image: url(assets/images/solution-bg.jpg);">
     <div class="solution-overlay pt-120">
         <div class="container">
@@ -118,41 +84,39 @@
                 <div class="col-lg-8">
                     <div class="solution-box">
                         <div class="solution-content">
-                            <h3 class="title">Get Better Solution For Your Business</h3>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa</p>
+                            <h3 class="title">Decouvrez l'institut</h3>
+                            <p>Augmenter l’efficacité et l’efficience du service rendu, c’est faire en sorte que les institutions de sécurité sociale se saisissent des opportunités de se rapprocher de vous pour mieux vous servir. Ce portail, ainsi, mis à disposition, vous offre la possibilité de procéder à distance à certaines opérations, jusque-là effectuées qu’en agence et contribuera largement à optimiser le parcours usager.</p>
                             <div class="solution-play text-right mr-30 d-block d-lg-none">
-                                <a class="video-popup" href="http://bit.ly/2VuPnrx"><i class="fas fa-play"></i></a>
+                                <a class="video-popup"><i class="fas fa-play"></i></a>
                             </div> <!-- solution play -->
                         </div>
                     </div> <!-- solution box -->
                 </div>
                 <div class="col-lg-4">
                     <div class="solution-play text-right mr-30 d-none d-lg-block">
-                        <a class="video-popup" href="http://bit.ly/2VuPnrx"><i class="fas fa-play"></i></a>
+                        <a class="video-popup" href="https://www.youtube.com/watch?time_continue=11&v=k8d5_3hhgJk&feature=emb_logo" ><i class="fas fa-play"></i></a>
                     </div> <!-- solution play -->
                 </div>
             </div> <!-- row -->
         </div> <!-- container -->
     </div>
 </div>
-<!--====== SOLUTION PART ENDS ======-->
-<!--====== SERVICES TITLE PART START ======-->
+
 <div class="services-title-area">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-12">
                 <div class="services-title-item text-center">
                     <div class="ring-shape"></div>
-                    <span>Our latest services</span>
-                    <h3 class="title">We Offer Better Soluation For Your IT Business</h3>
+                    <span>Vos droits et devoirs</span>
+                    <h3 class="title">Des informations pour mieux vous aider à comprendre votre statut</h3>
                 </div> <!-- services title item -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== SERVICES TITLE PART ENDS ======-->
-<!--====== LATEST SERVICES PART START ======-->
-<div class="latest-services-area">
+
+<div class="latest-services-area" >
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
@@ -161,9 +125,9 @@
                         <img src="assets/images/services-4.1.jpg" alt="">
                     </div>
                     <div class="services-content">
-                        <h4 class="title">Desktop Computing</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                        <h4 class="title">ESPACE EMPLOYEUR</h4>
+                        <p>On entend par employeur "toute personne physique ou morale, publique ou privée ayant à son service, moyennant rémunération, une ou plusieurs personnes.</p>
+                        <a [routerLink]="['/employeur-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -173,9 +137,9 @@
                         <img src="assets/images/services-4.2.jpg" alt="">
                     </div>
                     <div class="services-content">
-                        <h4 class="title">Infrastructure Planning</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                        <h4 class="title">ESPACE SALARIÉ</h4>
+                        <p>Le salarié est une personne qui s'engage à exécuter un travail, à temps plein ou à temps partiel, pour le compte d'un employeur, en contrepartie d'un salaire ou d'un traitement</p>
+                        <a href="#employe">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -185,92 +149,36 @@
                         <img src="assets/images/services-4.3.jpg" alt="">
                     </div>
                     <div class="services-content">
-                        <h4 class="title">Big Data & Analytics</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.4.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">It Management System</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration="2.5s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.5.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">Web Development</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration="3s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.6.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">Dedicated IT Solution</h4>
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiuto-tam rem aperiam eaque ipsa quae inventore</p>
-                        <a routerLink='/service-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                        <h4 class="title">ESPACE ALLOCATAIRE</h4>
+                        <p>Les allocataires des Caisses d'Allocations Familiales sont les personnes qui perçoivent au moins une allocation en regard de leur situation familiale et/ou monétaire.</p>
+                        <a href="#allocataire">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== LATEST SERVICES PART ENDS ======-->
-<!--====== WHY CHOOSE PART START ======-->
-<div class="why-choose-area">
+
+<div class="why-choose-area" id="employeur">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center">
-                    <span>why choose us</span>
-                    <h2 class="title">We Are Very Different Form Others IT Solutions</h2>
+                    <span></span>
+                    <h2 class="title">En tant qu'employeur</h2>
+                    <p>Vous pouvez faire : </p>
                 </div>
             </div>
         </div>
         <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-9 wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
+            <div class="col-lg-4 col-md-6 col-sm-9 wow slideInUp mb-3" *ngFor="let item of employeurData" data-wow-duration=".5s" data-wow-delay="0s">
                 <div class="single-choose text-center mt-30">
                     <div class="icon-box">
                         <span></span>
-                        <i class="fal fa-laptop-code"></i>
+                        <i class="fal fa-{{item?.icon}}"></i>
                     </div>
-                    <h4 class="title">Modify Whole System</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudan-tium totam rem aperiam eaque ipsa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                <div class="single-choose text-center mt-30">
-                    <div class="icon-box">
-                        <span></span>
-                        <i class="fal fa-server"></i>
-                    </div>
-                    <h4 class="title">Beneficial Strategies</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudan-tium totam rem aperiam eaque ipsa</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                <div class="single-choose text-center mt-30">
-                    <div class="icon-box">
-                        <span></span>
-                        <i class="fal fa-tools"></i>
-                    </div>
-                    <h4 class="title">Automated Software</h4>
-                    <p>Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudan-tium totam rem aperiam eaque ipsa</p>
+                    <h4 class="title pt-3">{{item?.title}}</h4>
+                    <!-- <p>{{item?.description}}</p> -->
                 </div>
             </div>
         </div>
@@ -282,208 +190,69 @@
         <img src="assets/images/choose-shape.png" alt="">
     </div>
 </div>
-<!--====== WHY CHOOSE PART ENDS ======-->
-<!--====== CASE STUDIES PART START ======-->
-<div class="case-studies-area">
+
+<div class="case-studies-area" id="allocataire">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-title">
-                    <span>Latest Case Studies</span>
-                    <h2 class="title">Reads Our Recent Case Studies </h2>
+                  <h2 class="title">Allocataire </h2>
+                  <span>Voir tout <i class="fal fa-long-arrow-right"></i> </span>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
     <div class="container-fluid pl-70 pr-70">
         <div class="row no-gutters case-studies-active">
-            <div class="col-lg-3">
+            <div class="col-lg-3" *ngFor="let item of allocataireData">
                 <div class="single-case-studies mt-30">
-                    <img src="assets/images/case-studies-1.jpg" alt="case-studies">
+                    <img src="{{item?.img}}" alt="case-studies">
                     <div class="case-overlay">
                         <div class="item">
-                            <span>IT / Solutions </span>
-                            <h5 class="title">How To Improve <br> IT knowledge</h5>
+                            <!-- <span>{{item?.description}}</span> -->
+                            <h5 class="title">{{item?.title}}</h5>
                         </div>
-                        <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single case studies -->
-            </div>
-            <div class="col-lg-3">
-                <div class="single-case-studies mt-30">
-                    <img src="assets/images/case-studies-2.jpg" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <span>Product Design</span>
-                            <h5 class="title">Develop Your IT <br> Business Growth</h5>
-                        </div>
-                        <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single case studies -->
-            </div>
-            <div class="col-lg-3">
-                <div class="single-case-studies mt-30">
-                    <img src="assets/images/case-studies-3.jpg" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <span>Consulting</span>
-                            <h5 class="title">Management Your <br>It Solutions System</h5>
-                        </div>
-                        <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single case studies -->
-            </div>
-            <div class="col-lg-3">
-                <div class="single-case-studies mt-30">
-                    <img src="assets/images/case-studies-4.jpg" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <span>Software Solutiona</span>
-                            <h5 class="title">How To Control <br>Your IT Customer</h5>
-                        </div>
-                        <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single case studies -->
-            </div>
-            <div class="col-lg-3">
-                <div class="single-case-studies mt-30">
-                    <img src="assets/images/case-studies-2.jpg" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <span>Product Design</span>
-                            <h5 class="title">Develop Your IT <br> Business Growth</h5>
-                        </div>
-                        <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
+                        <a ><i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single case studies -->
             </div>
         </div> <!-- row -->
     </div> <!-- containe fluid -->
 </div>
-<!--====== CASE STUDIES PART ENDS ======-->
-<!--====== TEAM MEMBER PART START ======-->
-<div class="team-member-area">
+
+<div class="case-studies-area who-we-are-area" id="employe">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="section-title text-center">
-                    <span>our team member</span>
-                    <h2 class="title">Meet Our Exclusive Leadership</h2>
-                </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-title">
+                    <span>Vous avez les possibilités suivantes en tant que </span>
+                    <h2 class="title">EMPLOYE </h2>
+                </div> <!-- section title -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-1.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-2.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-3.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-4.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-5.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-6.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div> <!-- single team member -->
-            </div>
+        <div class="row no-gutters case-studies-active">
+              <div class="col-lg-3 col-md-3 col-sm-6 slideInUp pl-4 pr-4 pb-3 pb-2" *ngFor="let item of employeData" data-wow-duration="2s" data-wow-delay="0s">
+                  <div class="what-we-do-item text-center wow  mt-30">
+                      <i class="fal fa-{{item?.icon}}"></i>
+                      <h5 class="title text-capitalize">{{item?.title}}</h5>
+                      <p >{{item?.description | slice:0:80}}</p>
+                      <a ><i class="fal fa-long-arrow-right"></i></a>
+                  </div> <!-- what we do item -->
+              </div>
         </div> <!-- row -->
-    </div> <!-- container fluid -->
+    </div> <!-- containe fluid -->
 </div>
-<!--====== TEAM MEMBER PART ENDS ======-->
-<!--====== CONTACT US PART START ======-->
+
 <div class="contact-us-area bg_cover" style="background-image: url(assets/images/contact-bg.jpg)">
     <div class="contact-overlay">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title text-center">
-                        <span>contact us</span>
-                        <h2 class="title">Join Us To Get Free Consultations</h2>
+                        <span>Contactez-nous</span>
+                        <h2 class="title">Nous rejoindre pour souscrire a IPRES</h2>
                     </div> <!-- sevtion title -->
                 </div>
             </div> <!-- row -->
@@ -498,38 +267,38 @@
                         <div class="contact-form-area">
                             <form action="#">
                                 <div class="input-title">
-                                    <h3 class="title">Don't Hesitate To Contact With Us, Say Hello......</h3>
+                                    <h3 class="title">Ne perdez pas de temps......</h3>
                                 </div> <!-- input title -->
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="input-box mt-30">
-                                            <input type="text" placeholder="Full Name Here">
+                                            <input type="text" placeholder="Prénom & nom">
                                             <i class="fal fa-user"></i>
                                         </div> <!-- input box -->
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="input-box mt-30">
-                                            <input type="email" placeholder="Email Here">
+                                            <input type="email" placeholder="Email">
                                             <i class="fal fa-envelope-open"></i>
                                         </div> <!-- input box -->
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="input-box mt-30">
-                                            <input type="text" placeholder="Phone No">
+                                            <input type="text" placeholder="Numéro">
                                             <i class="fal fa-phone"></i>
                                         </div> <!-- input box -->
                                     </div>
                                     <div class="col-lg-6">
                                         <div class="input-box mt-30">
-                                            <input type="text" placeholder="Subject">
+                                            <input type="text" placeholder="Sujet">
                                             <i class="fal fa-edit"></i>
                                         </div> <!-- input box -->
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="input-box mt-30">
-                                            <textarea name="#" id="#" cols="30" rows="10" placeholder="Message Us"></textarea>
+                                            <textarea name="#" id="#" cols="30" rows="10" placeholder="Message"></textarea>
                                             <i class="fal fa-pencil"></i>
-                                            <button class="main-btn wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s" type="submit">Send Message <i class="fal fa-long-arrow-right"></i></button>
+                                            <button class="main-btn wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s" type="submit">Envoyer <i class="fal fa-long-arrow-right"></i></button>
                                         </div> <!-- input box -->
                                     </div>
                                 </div>
@@ -541,66 +310,15 @@
         </div> <!-- container -->
     </div>
 </div>
-<!--====== CONTACT US PART ENDS ======-->
-<!--====== OUE CHOOSE PART START ======-->
+
 <div class="our-choose-area">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title mt-30">
-                    <span>Best agecy for you</span>
-                    <h2 class="title">Why Choose Our Solutions</h2>
-                </div> <!-- section title -->
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <a class="" href="" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <i class="fal fa-long-arrow-right"></i> We Provide Professional Service
-                            </a>
-                        </div>
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
-                            </div>
-                        </div>
-                    </div> <!-- card -->
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <a class="collapsed" href="" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                <i class="fal fa-long-arrow-right"></i> Stay Up, Stay Running & Protected
-                            </a>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
-                            </div>
-                        </div>
-                    </div> <!-- card -->
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <a class="collapsed" href="" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <i class="fal fa-long-arrow-right"></i> Our Experienced Experts
-                            </a>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
-                            </div>
-                        </div>
-                    </div> <!-- card -->
-                    <div class="card">
-                        <div class="card-header" id="headingFour">
-                            <a class="collapsed" href="" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                <i class="fal fa-long-arrow-right"></i> Management Engineering System
-                            </a>
-                        </div>
-                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-                            <div class="card-body">
-                                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam</p>
-                            </div>
-                        </div>
-                    </div> <!-- card -->
-                </div> <!-- accordion -->
+                    <span>IPRES CNSS</span>
+                    <h2 class="title">En quelques chiffres</h2>
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="our-choose-counter-area mt-30">
@@ -608,25 +326,25 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="our-choose-counter wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
                                 <sub><span class="counter">569</span> <sup>+</sup></sub>
-                                <span>Projct Complate</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p>
+                                <span>Employeurs</span>
+                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
                             </div>
                             <div class="our-choose-counter wow slideInUp mt-55" data-wow-duration="1s" data-wow-delay="0s">
                                 <sub><span class="counter">783</span> <sup>+</sup></sub>
-                                <span>Business Partners</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p>
+                                <span>Salariés</span>
+                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="our-choose-counter wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
                                 <sub><span class="counter">356</span> <sup>+</sup></sub>
-                                <span>Happy Clients</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p>
+                                <span>Allocataire</span>
+                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
                             </div>
                             <div class="our-choose-counter wow slideInUp mt-55" data-wow-duration="2s" data-wow-delay="0s">
-                                <sub><span class="counter">894</span> <sup>+</sup></sub>
-                                <span>IT Consultant</span>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p>
+                                <sub><span class="counter">94</span> <sup>+</sup></sub>
+                                <span>Agences</span>
+                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
                             </div>
                         </div> <!-- our choose counter -->
                     </div> <!-- row -->
@@ -635,29 +353,14 @@
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== OUE CHOOSE PART ENDS ======-->
-<!--====== MEET US PART START ======-->
-<div class="meet-us-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="meet-us-item bg_cover d-flex align-items-center justify-content-between" style="background-image: url(assets/images/meet-us-bg.jpg)">
-                    <h2 class="title">Preparing For Your <br> Business Success</h2>
-                    <a class="main-btn" routerLink='/contact-us'>Meet With Us <i class="fal fa-long-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--====== MEET US PART ENDS ======-->
-<!--====== LATEST NEWS PART START ======-->
+
 <div class="latest-news-area gray-bg">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6">
                 <div class="section-title text-center">
-                    <span>latest news</span>
-                    <h2 class="title">Read Our Latest News & Blog</h2>
+                    <span>Blog</span>
+                    <h2 class="title">Dernieres publications</h2>
                 </div> <!-- sction title -->
             </div>
         </div> <!-- row -->
@@ -670,26 +373,26 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
                                 <div class="letest-news-item mt-30">
-                                    <span>By Admin, 05 Aug 2019</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>Monthly Web Development Update Design Ethics & Clarity Over Solution System</a></h4>
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sip erntur aut odit aut fugit, sed quia consequunturm agni dolores eos qui ratione voluptatem</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                                    <span> Admin, 05 Aout 2020</span>
+                                    <h4 class="title"><a routerLink='/blog-detail'>Programe de logements sociaux</a></h4>
+                                    <p>La CSS a mis en place un programme immobilier de 345 logements sociaux sis à Bambilor...</p>
+                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
                                 </div> <!-- lesast news item -->
                             </div>
                             <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
                                 <div class="letest-news-item mt-30">
-                                    <span>By Admin, 05 Aug 2019</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>Design System: What It Is And How To Create One Using Indigo Design Sence</a></h4>
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sip erntur aut odit aut fugit, sed quia consequunturm agni dolores eos qui ratione voluptatem</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                                    <span> Admin, 05 Aout 2020</span>
+                                    <h4 class="title"><a routerLink='/blog-detail'>Revalorisation allocations</a></h4>
+                                    <p>Revalorisation des allocations familliales et des rentes d’accidents du travail et de maladies professionnelles</p>
+                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
                                 </div> <!-- lesast news item -->
                             </div>
                             <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
                                 <div class="letest-news-item mt-30">
-                                    <span>By Admin, 05 Aug 2019</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>How We Used WebAssembly To Speed Up Our Web App By 20X (Case Study)</a></h4>
-                                    <p>Nemo enim ipsam voluptatem quia voluptas sip erntur aut odit aut fugit, sed quia consequunturm agni dolores eos qui ratione voluptatem</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Read More <i class="fal fa-long-arrow-right"></i></a>
+                                    <span> Admin, 05 Aout 2020</span>
+                                    <h4 class="title"><a routerLink='/blog-detail'>IPRES : Le choix de la proximité</a></h4>
+                                    <p>collaborateurs de l'institution, notre système de retraite par répartition est fondé sur le principe de solidarité entre les générations,</p>
+                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
                                 </div> <!-- lesast news item -->
                             </div>
                         </div>
@@ -699,38 +402,5 @@
         </div> <!-- container -->
     </div>
 </div>
-<!--====== LATEST NEWS PART ENDS ======-->
-<!--====== BRAND 2 PART START ======-->
-<div class="brand-2-area pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="brand-active">
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-1.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-2.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-3.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-4.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-5.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-6.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-3.png" alt="brand name">
-                    </div>
-                </div> <!-- brand item -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-</div>
-<!--====== BRAND 2 PART ENDS ======-->
+
 <app-footer></app-footer>

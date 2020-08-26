@@ -1,12 +1,39 @@
-.header-nav{
-  .navigation{
-    top: 0;
-  }
+.single-banner {
+    margin-top: 100px;
 }
-.register-btn{
+.services-thumb{
+  height: 250px;
+  overflow: hidden;
+}
 
+.single-banner .banner-overlay {
+    display: flex;
+    align-items: center;
+    height: 900px;
+    background: linear-gradient(90deg, #101010bf 0%, rgb(27 26 26 / 48%) 50%, rgba(255, 255, 255, 0) 100%);
+    //background: linear-gradient(90deg, #f6931e 0%, rgb(255, 58, 23, 48%) 50%, rgba(255, 255, 255, 0) 100%);
 }
-.header-area-2.header-area-4 .header-nav .navigation .navbar .navbar-btn a {
-  border: 1px solid #9999;
-  font-weight: 700;
+.who-we-are-area .what-we-do-item a {
+    background: #ff3a18;
+  }
+
+.who-we-are-area .what-we-do-item > i {
+    color: #4e66a9;
+}
+.services-title-area {
+    background: #4e66a9;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.services-title-area .services-title-item {
+    padding-top: 50px;
+}
+.latest-services-area .single-services .services-content .title::before {
+    background: #f6992e;
+}
+.latest-services-area .single-services .services-content a {
+    border: 3px solid #f6992e;
+}
+.contact-us-area .contact-overlay {
+    background-color: rgb(78 102 169);
 }

@@ -45,17 +45,17 @@
                             <!-- sub menu -->
                         <!-- </li> -->
                         <li class="nav-item">
-                            <a class="nav-link" routerLink='/about' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Espace employeur</a>
+                            <a class="nav-link" [routerLink]="['/employeur-details']">Espace employeur</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Espace employé</a>
+                            <a class="nav-link" href="#employe">Espace employé</a>
                             <!-- <ul class="sub-menu">
                                 <li><a routerLink='/services' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Services</a></li>
                                 <li><a routerLink='/service-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Services Details</a></li>
                             </ul>  -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Espace allocataire </a>
+                            <a class="nav-link" href="#allocataire">Espace allocataire </a>
                             <!-- <ul class="sub-menu">
                                 <li><a routerLink='/case-study' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">case study</a></li>
                                 <li><a routerLink='/case-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Case Details</a></li>
@@ -89,10 +89,10 @@
                     </ul>
                 </div> -->
                 <div class="navbar-btn mr-100 pr-3">
-                    <a class="register-btn" routerLink='/contact-us'>Inscription</a>
+                    <a class="register-btn" routerLink='/register'>Inscription</a>
                 </div>
                 <div class="navbar-btn mr-100">
-                    <a class="main-btn" routerLink='/contact-us'>Connexion <i class="fal fa-long-arrow-right"></i></a>
+                    <a class="main-btn" routerLink='/register'>Connexion <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </nav>
         </div> <!-- navigation -->

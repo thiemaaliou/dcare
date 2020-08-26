@@ -1,0 +1,122 @@
+
+:root {
+  --bleu: #4e66a9;
+  --orange2: #f4901f;
+  --noir: #000;
+  --rouge: #cf3b3b;
+  --orange: #ff6600;
+}
+
+.main-btn{
+    border: 2px solid var(--rouge);
+    background-color: var(--rouge);
+}
+.contact-us-area .contact-overlay {
+    background-color: var(--orange);
+}
+.contact-us-area .contact-overlay .contact-details .contact-form-area .input-box button {
+  border-color: var(--rouge);
+  background: var(--rouge);
+}
+.services-content a:hover{
+  background: var(--orange2) !important;
+}
+.case-studies-area .single-case-studies{
+  height: 240px;
+}
+.text-capitalize{
+  text-transform: capitalize;
+}
+.why-choose-area .single-choose .icon-box {
+    height: 115px;
+    width: 115px;
+    line-height: 136px;
+}
+.why-choose-area .single-choose .icon-box i{
+  font-size: 40px;
+}
+.who-we-are-area .what-we-do-item:hover{
+  background: var(--orange);
+}
+.case-studies-area .single-case-studies .case-overlay a{
+  background: var(--bleu);
+}
+.back-to-top a{
+  background: var(--rouge);
+}
+.our-choose-area .our-choose-counter-area .our-choose-counter sub{
+  color: var(--bleu);
+}
+.latest-news-area .letast-news-grid .letest-news-item > a{
+  border-color: var(--orange2);
+}
+.latest-news-area .letast-news-grid .letest-news-item > a:hover{
+  background: var(--orange2);
+}
+.nice-select{
+  display: none !important;
+}
+.custom-select{
+  display: block !important;
+  width: 100%;
+  border-bottom: 2px solid #e3eeff !important;
+  border: none;
+  border-radius: 0 !important;
+  padding-left: 0;
+  color: #000;
+  font-size: 16px;
+  height: 46px;
+  outline: none;
+  box-shadow: none;
+  border-color: #fff;
+}
+
+.register-form .input-box label{
+  position: absolute;
+  bottom: 4px;
+}
+
+label{
+  position: absolute;
+  left: 0;
+}
+ input + label,
+ .custom-select +  label{
+   bottom: 4px;
+   transition: all 0.3s;
+ }
+.float-label + label{
+  bottom: 30px !important;
+}
+.nice-select .list{
+  width: 100%;
+}
+.error.show{
+  color: var(--rouge);
+  opacity: 1;
+  bottom: -25px;
+}
+.error{
+  transition: all 0.5s;
+  opacity: 0;
+  position: absolute;
+  bottom: -10px;
+}
+.change-password-container{
+  max-width: 600px !important;
+  border-radius: 5px;
+}
+.change-password-container img{
+  width: 100%;
+}
+
+.fal.fa-eye,
+.fal.fa-eye-slash{
+  cursor: pointer;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.text-red{
+  color: var(--rouge);
+}
