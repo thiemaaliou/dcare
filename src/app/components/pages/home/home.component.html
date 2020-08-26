@@ -1,5 +1,5 @@
 <app-header></app-header>
-<!--====== BANNER PART START ======-->
+
 <div class="banner-active">
     <div class="single-banner bg_cover" *ngFor="let slide of slideData" [ngStyle]="{'background-image': 'url('+slide.img+')', 'background-repeat': 'no-repeat'}">
         <div class="banner-overlay">
@@ -17,11 +17,8 @@
             </div> <!-- container -->
         </div>
     </div>
-
-
 </div>
-<!--====== BANNER PART ENDS ======-->
-<!--====== WHO WE ARE PART START ======-->
+
 <div class="who-we-are-area pt-110 pb-120">
     <div class="container">
         <div class="row">
@@ -79,8 +76,7 @@
         <img src="assets/images/what-we-are-shape-2.png" alt="shape">
     </div>
 </div>
-<!--====== WHO WE ARE PART ENDS ======-->
-<!--====== SOLUTION PART START ======-->
+
 <div class="solution-area bg_cover" style="background-image: url(assets/images/solution-bg.jpg);">
     <div class="solution-overlay pt-120">
         <div class="container">
@@ -105,8 +101,7 @@
         </div> <!-- container -->
     </div>
 </div>
-<!--====== SOLUTION PART ENDS ======-->
-<!--====== SERVICES TITLE PART START ======-->
+
 <div class="services-title-area">
     <div class="container">
         <div class="row justify-content-center">
@@ -120,9 +115,8 @@
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== SERVICES TITLE PART ENDS ======-->
-<!--====== LATEST SERVICES PART START ======-->
-<div class="latest-services-area" id="employeur">
+
+<div class="latest-services-area" >
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
@@ -132,8 +126,8 @@
                     </div>
                     <div class="services-content">
                         <h4 class="title">ESPACE EMPLOYEUR</h4>
-                        <p>Vous êtes Employeur. Nous considérons l'entreprise comme un partenaire et souhaitons accompagner quotidiennement l'employeur.</p>
-                        <a routerLink='/service-detail'>ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+                        <p>On entend par employeur "toute personne physique ou morale, publique ou privée ayant à son service, moyennant rémunération, une ou plusieurs personnes.</p>
+                        <a href="#employeur">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -144,8 +138,8 @@
                     </div>
                     <div class="services-content">
                         <h4 class="title">ESPACE SALARIÉ</h4>
-                        <p>Vous êtes Salariés. Les salariés assurent l'effort de solidarité entre les générations, notre Mission est de leurs garantir la pérrenitée</p>
-                        <a routerLink='/service-detail'>ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+                        <p>Le salarié est une personne qui s'engage à exécuter un travail, à temps plein ou à temps partiel, pour le compte d'un employeur, en contrepartie d'un salaire ou d'un traitement</p>
+                        <a href="#employe">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -156,16 +150,15 @@
                     </div>
                     <div class="services-content">
                         <h4 class="title">ESPACE ALLOCATAIRE</h4>
-                        <p>Vous êtes Retraités. Nos retraités sont aux centre de notre mission de service public et doivent faire l'objet de toutes nos attentions.</p>
-                        <a routerLink='/service-detail'>ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+                        <p>Les allocataires des Caisses d'Allocations Familiales sont les personnes qui perçoivent au moins une allocation en regard de leur situation familiale et/ou monétaire.</p>
+                        <a href="#allocataire">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== LATEST SERVICES PART ENDS ======-->
-<!--====== WHY CHOOSE PART START ======-->
+
 <div class="why-choose-area" id="employeur">
     <div class="container">
         <div class="row justify-content-center">
@@ -197,27 +190,26 @@
         <img src="assets/images/choose-shape.png" alt="">
     </div>
 </div>
-<!--====== WHY CHOOSE PART ENDS ======-->
-<!--====== CASE STUDIES PART START ======-->
+
 <div class="case-studies-area" id="allocataire">
     <div class="container">
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-title">
-                    <span>Vous avez les possibilités suivantes en tant que </span>
-                    <h2 class="title">Allocataire </h2>
+                  <h2 class="title">Allocataire </h2>
+                  <span>Voir tout <i class="fal fa-long-arrow-right"></i> </span>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
     </div> <!-- container -->
     <div class="container-fluid pl-70 pr-70">
         <div class="row no-gutters case-studies-active">
-            <div class="col-lg-3" *ngFor="let item of employeurData">
+            <div class="col-lg-3" *ngFor="let item of allocataireData">
                 <div class="single-case-studies mt-30">
                     <img src="{{item?.img}}" alt="case-studies">
                     <div class="case-overlay">
                         <div class="item">
-                            <span>{{item?.description}}</span>
+                            <!-- <span>{{item?.description}}</span> -->
                             <h5 class="title">{{item?.title}}</h5>
                         </div>
                         <a ><i class="fal fa-long-arrow-right"></i></a>
@@ -227,122 +219,32 @@
         </div> <!-- row -->
     </div> <!-- containe fluid -->
 </div>
-<!--====== CASE STUDIES PART ENDS ======-->
-<!--====== TEAM MEMBER PART START ======-->
-<!-- <div class="team-member-area">
+
+<div class="case-studies-area who-we-are-area" id="employe">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="section-title text-center">
-                    <span>our team member</span>
-                    <h2 class="title">Meet Our Exclusive Leadership</h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-1.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
+            <div class="col-lg-5">
+                <div class="section-title">
+                    <span>Vous avez les possibilités suivantes en tant que </span>
+                    <h2 class="title">EMPLOYE </h2>
+                </div> <!-- section title -->
             </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-2.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-3.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-4.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-5.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-2 col-md-4 col-sm-6">
-                <div class="single-team-member mt-30">
-                    <img src="assets/images/team-member-6.jpg" alt="team-member">
-                    <div class="team-member-overlay">
-                        <ul>
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <h4 class="title">David Jhon Korla</h4>
-                        <span>IT Consultant</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--====== TEAM MEMBER PART ENDS ======-->
-<!--====== CONTACT US PART START ======-->
+        </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="container-fluid">
+        <div class="row no-gutters case-studies-active">
+              <div class="col-lg-3 col-md-3 col-sm-6 slideInUp pl-4 pr-4 pb-3 pb-2" *ngFor="let item of employeData" data-wow-duration="2s" data-wow-delay="0s">
+                  <div class="what-we-do-item text-center wow  mt-30">
+                      <i class="fal fa-{{item?.icon}}"></i>
+                      <h5 class="title text-capitalize">{{item?.title}}</h5>
+                      <p >{{item?.description | slice:0:80}}</p>
+                      <a ><i class="fal fa-long-arrow-right"></i></a>
+                  </div> <!-- what we do item -->
+              </div>
+        </div> <!-- row -->
+    </div> <!-- containe fluid -->
+</div>
+
 <div class="contact-us-area bg_cover" style="background-image: url(assets/images/contact-bg.jpg)">
     <div class="contact-overlay">
         <div class="container">
@@ -408,44 +310,7 @@
         </div> <!-- container -->
     </div>
 </div>
-<!--====== CONTACT US PART ENDS ======-->
-<div class="case-studies-area who-we-are-area" id="employe">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title">
-                    <span>Vous avez les possibilités suivantes en tant que </span>
-                    <h2 class="title">EMPLOYE </h2>
-                </div> <!-- section title -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="container-fluid">
-        <div class="row no-gutters case-studies-active">
-              <div class="col-lg-3 col-md-3 col-sm-6 slideInUp pl-4 pr-4 pb-3 pb-2" *ngFor="let item of employeData" data-wow-duration="2s" data-wow-delay="0s">
-                  <div class="what-we-do-item text-center wow  mt-30">
-                      <i class="fal fa-{{item?.icon}}"></i>
-                      <h5 class="title text-capitalize">{{item?.title}}</h5>
-                      <p >{{item?.description | slice:0:80}}</p>
-                      <a ><i class="fal fa-long-arrow-right"></i></a>
-                  </div> <!-- what we do item -->
-              </div>
 
-                <!-- <div class="single-case-studies mt-30">
-                    <img src="{{item?.img}}" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <span>{{item?.description}}</span>
-                            <h5 class="title">{{item?.title}}</h5>
-                        </div>
-                        <a ><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div>  -->
-
-        </div> <!-- row -->
-    </div> <!-- containe fluid -->
-</div>
-<!--====== OUE CHOOSE PART START ======-->
 <div class="our-choose-area">
     <div class="container">
         <div class="row">
@@ -488,22 +353,7 @@
         </div> <!-- row -->
     </div> <!-- container -->
 </div>
-<!--====== OUE CHOOSE PART ENDS ======-->
-<!--====== MEET US PART START ======-->
-<!-- <div class="meet-us-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="meet-us-item bg_cover d-flex align-items-center justify-content-between" style="background-image: url(assets/images/meet-us-bg.jpg)">
-                    <h2 class="title">Preparing For Your <br> Business Success</h2>
-                    <a class="main-btn" routerLink='/contact-us'>Meet With Us <i class="fal fa-long-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--====== MEET US PART ENDS ======-->
-<!--====== LATEST NEWS PART START ======-->
+
 <div class="latest-news-area gray-bg">
     <div class="container">
         <div class="row justify-content-center">
@@ -552,38 +402,5 @@
         </div> <!-- container -->
     </div>
 </div>
-<!--====== LATEST NEWS PART ENDS ======-->
-<!--====== BRAND 2 PART START ======-->
-<!-- <div class="brand-2-area pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="brand-active">
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-1.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-2.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-3.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-4.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-5.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-6.png" alt="brand name">
-                    </div>
-                    <div class="brand-item">
-                        <img src="assets/images/brand-item-3.png" alt="brand name">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
-<!--====== BRAND 2 PART ENDS ======-->
+
 <app-footer></app-footer>

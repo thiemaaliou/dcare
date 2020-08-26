@@ -42,7 +42,7 @@ const routes: Routes = [
     path:'about',component:AboutComponent
   },
   {
-    path:'blog-detail',component:BlogdetailsComponent
+    path:'details/:type',component: BlogdetailsComponent
   },
   {
     path:'blog-grid',component:BloggridComponent

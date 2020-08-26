@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
        title: "IPRES Sénégal<br> Votre solution",
        subTitle: "L'Institution de Prévoyance Retraites du Sénégal",
        description: "L'institution de Prévoyance Retraite du Sénégal (I.P.RE.S.) est un organisme de droit privé placé sous la tutelle technique et financière de l'Etat.",
-       img: "assets/images/1-04.jpg",
+       img: "assets/images/bannieres-ipres-2.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      },
@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
        title: "Caisse de sécurité <br>sociale",
        subTitle: "Caisse de sécurité sociale",
        description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
-       img: "assets/images/1-02.jpg",
+       img: "assets/images/bannieres-ipres-3.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      },
@@ -27,7 +27,7 @@ export class HomeComponent implements OnInit {
        title: "Paiement en ligne <br> IPRES CSS",
        subTitle: "Paiement sécurisé et rapide",
        description: "Elle dispose d'agences régionales, de centres de protection maternelle et infantile, de cliniques et de plannings familiaux. L'Institution de Prévoyance Retraites du Sénégal (IPRES) gère le régime national obligatoire d'assurance vieillesse",
-       img: "assets/images/1-01.jpg",
+       img: "assets/images/bannieres-ipres-1.jpg",
        btnText: "En savoir plus",
        btnUrl: "/services"
      }
@@ -70,42 +70,82 @@ export class HomeComponent implements OnInit {
        icon: "book"
      },
    ];
+
    employeData= [
      {
        img: "assets/images/case-studies-1.png",
-       title: "Régime de retraite",
+       title: "Vos droits et devoirs",
        icon: "draw-polygon",
-       description: "Le Régime Général. Tout membre participant est automatiquement affilié au Régime Général. Le taux de cotisation pour le Régime général est de 14% (8,4% part employeur et 5,6% part du salarié)."
+       description: "Tout salarié est considéré comme membre participant à compter de son embauchage et au plus tôt à partir de son dix-huitième anniversaire. "
      },
      {
         img: "assets/images/case-studies-1.png",
-        title: "Reconctituer votre carrière",
+        title: "Qu'est-ce qu'un participant?",
         icon: "grin-hearts",
-        description: "Tout membre participant peut demander son relevé de points ou sa carte d’affiliation. Le relevé de points est obtenu sur demande écrite en joignant  une attestation ou certificat de travail et une copie légalisée de la carte d’identité nationale."
+        description: "Les salariés actifs sont désignés sous le nom de Participants ou Cotisants. L'IPRES attribue un numéro unique pour toute son existence à chaque participant."
      },
      {
        img: "assets/images/case-studies-1.png",
-       title: "Allocations familliales",
+       title: "Les conditions d’âge d'un participant",
        icon: "users",
-       description: "Pour bénéficier des prestations familiales servies par la Caisse de Sécurité Sociale, vous devez fournir un dossier contenant les pièces suivantes: Une demande de prestations familiales, Une déclaration de mouvement de travailleur..."
+       description: "S'assurer que votre employeur vous a bien déclaré et que les cotisations sont bien prélevées (voir vos bulletins de paie). "
      },
      {
        img: "assets/images/case-studies-1.png",
-       title: "Congé maternité",
+       title: "Votre régime de retraite - Le Régime Général",
        icon: "child",
-       description: "Au moment du départ en congé de maternité.Remplir une demande d'indemnités de congé de maternité fournie par la Caisse. Une attestation de travail signée par l'employeur, Un certificat médical de grossesse..."
+       description: "Tout membre participant est automatiquement affilié au Régime Général. Le taux de cotisation pour le Régime général est de 14% (8,4% part employeur et 5,6% part du salarié)."
      },
      {
        img: "assets/images/case-studies-1.png",
-       title: "Accident du travail",
+       title: "Votre régime de retraite - Le Régime cadre",
        icon: "user-tie",
-       description: "Lorsqu'un de vos salariés est victime d'un accident du travail vous êtes soumis aux formalités suivantes : Faire une déclaration d'AT/MP dans les 48h, Bulletin de salaire En même temps que la déclaration d'AT/MP quand il y a arrêt de travail..."
+       description: "Le salarié est considéré comme cadre, lorsqu’il : - possède une formation technique, administrative, juridique, commerciale ou financière résultant, "
      },
      {
        img: "assets/images/case-studies-1.png",
-       title: "Accident du trajet",
-       icon: "shuttle-van",
-       description: "Lorsqu'un de vos salariés est victime d'un accident du travail vous êtes soumis aux formalités suivantes : Faire une déclaration d'AT/MP dans les 48h, Bulletin de salaire En même temps que la déclaration d'AT/MP quand il y a arrêt de travail..."
+       title: "Votre régime de retraite - Le Régime employé maison",
+       icon: "user-tie",
+       description: "Est considéré comme employé de maison, tout salarié embauché au service d’un foyer et occupé d’une façon continue au domicile privé de l’employeur"
+     },
+     {
+       img: "assets/images/case-studies-1.png",
+       title: "Accédez à votre situation",
+       icon: "users",
+       description: "Tout membre participant peut demander son relevé de points ou sa carte d’affiliation. Le relevé de points est obtenu sur demande écrite en joignant  une attestation ou certificat de travail et une copie légalisée de la carte d’identité nationale"
+     },
+   ];
+
+   allocataireData = [
+     {
+       img: "assets/images/pension.png",
+       title: "La pension de retraite",
+       icon: "draw-polygon",
+     },
+     {
+       img: "assets/images/veuve.png",
+       title: "La pension de veuve / veuf",
+       icon: "draw-polygon",
+     },
+     {
+       img: "assets/images/orphelin.png",
+       title: "La pension d'orphelin(s)",
+       icon: "draw-polygon",
+     },
+     {
+       img: "assets/images/solidarite.png",
+       title: "L'Allocation de Solidarité",
+       icon: "draw-polygon",
+     },
+     {
+       img: "assets/images/forfaitaire.png",
+       title: "L'Allocation forfaitaire",
+       icon: "draw-polygon",
+     },
+     {
+       img: "assets/images/fond.png",
+       title: "Le fond social",
+       icon: "draw-polygon",
      }
    ]
 
