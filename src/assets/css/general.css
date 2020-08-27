@@ -66,9 +66,9 @@
   color: #000;
   font-size: 16px;
   height: 46px;
-  outline: none;
-  box-shadow: none;
-  border-color: #fff;
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #fff !important;
 }
 
 .register-form .input-box label{
@@ -119,4 +119,67 @@ label{
 }
 .text-red{
   color: var(--rouge);
+}
+.single-banner .banner-overlay .banner-content .title{
+  font-size: 4.2em;
+}
+.preloader{
+  background: var(--orange);
+}
+.page-title-area{
+  height: 24em;
+}
+.page-title-area .page-title-item {
+    padding-top: 10em;
+}
+.banner-overlay2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #101010f2 0%, rgb(27 26 26 / 82%) 50%, rgb(0 0 0 / 65%) 100%);
+}
+.page-detail-title{
+    color: #f6931e;
+}
+.blog-dteails-content {
+    padding: 25px 50px !important;
+}
+.no-margin{
+  margin: 0 !important;
+}
+.tabs{
+    border-bottom: 1px solid #ccc8;
+    margin-bottom: 20px;
+}
+.tab{
+  width: 90px;
+  height: 50px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 2em;
+  font-size: 1.2em;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-bottom: 0 solid var(--orange);
+}
+.tab.active{
+  border-bottom: 2px solid var(--orange);
+}
+.tab-section-block{
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+  height: 0;
+}
+
+.tab-section-block.active{
+  opacity: 1;
+  height: 100%;
+}
+.blog-sidebar-area .blog-sidebar-item .sidebar-title .title::before,
+.blog-sidebar-area .blog-sidebar-item .sidebar-title .title::after{
+  background: var(--orange);
 }
