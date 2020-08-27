@@ -4,4 +4,14 @@
 }
 .navigation:not(.sticky){
   top: 0 !important;
+  background: transparent !important;
+
+}
+.navigation:not(.sticky) .navbar .navbar-nav a{
+  line-height: 90px !important;
+  color: #fff !important;
+  text-transform: uppercase;
+}
+.header-nav .navigation:not(.sticky) .navbar .navbar-btn a{
+    color: #fff !important;
 }
