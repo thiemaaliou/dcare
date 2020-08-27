@@ -23,6 +23,8 @@ import { TeamComponent } from './components/pages/team/team.component';
 import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
+import { EmployeeComponent } from './components/pages/employee/employee.component';
+import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
 
 
 const routes: Routes = [
@@ -43,6 +45,12 @@ const routes: Routes = [
   },
   {
     path:'employeur-details',component: BlogdetailsComponent
+  },
+  {
+    path:'employe-details',component: EmployeeComponent
+  },
+  {
+    path:'allocataire-details',component: AllocataireComponent
   },
   {
     path:'blog-grid',component:BloggridComponent

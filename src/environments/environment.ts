@@ -6,7 +6,9 @@ export const environment = {
   production: false,
   apiUrl: 'http://192.168.1.45:8080/api/',
   appUrl: 'localhost:4200/',
-  adminAppUrl: 'ipres-cnss.sn'
+  adminAppUrl: 'ipres-cnss.sn',
+  appName: 'IPRES-CSS',
+  appHost: 'www.ipres-css.sn'
 };
 
 /*

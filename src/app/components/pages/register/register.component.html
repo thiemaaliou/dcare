@@ -7,7 +7,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="section-title text-center pt-5">
-                        <span> Elle est gratuite et le restera</span>
                         <h2 class="title">Inscription</h2>
                     </div> <!-- sevtion title -->
                 </div>
@@ -17,12 +16,6 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="contact-details d-flex">
-                        <!-- <div class="contact-thumb wow slideInLeft pb-3" data-wow-duration=".5s" data-wow-delay="0s">
-                          <div class="input-title pb-4">
-                              <h4 class="second-title">Appelez nous si vous avez besoin d'aide</h4>
-                          </div>
-                            <img src="assets/images/contact-man.jpg" alt="">
-                        </div> -->
                         <div class="contact-form-area">
                             <form #accountForm="ngForm" class="register-form" (ngSubmit)="checkForm(accountForm)">
                                 <div class="row">
@@ -60,7 +53,7 @@
                                         <div class="input-box mt-30">
                                             <input appFocus required type="text" name="login" [(ngModel)]="user.login">
                                             <label>Nom d'utilisateur</label>
-                                            <i class="fal fa-usr"></i>
+                                            <i class="fal fa-user"></i>
                                         </div> <!-- input box -->
                                         <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.login.status == 'INVALID' )">
                                            Le nom d'utilisateur est obligatoire

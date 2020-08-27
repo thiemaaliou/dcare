@@ -6,10 +6,7 @@
                 <div class="col-lg-4 col-md-7">
                     <div class="widget-item-1 mt-30">
                         <img src="assets/images/logo-1.1.png" alt="">
-                        <p>
-L'institution de Prévoyance Retraite du Sénégal (I.P.RE.S.) est un organisme de droit privé placé sous la tutelle technique et financière de l'Etat. Il dispose d'une réelle autonomie dans sa gestion et son organisation est régi par :
-
-la Loi 75-50 du 03 Avril 1975 relative aux Institutions de Prévoyance Sociale,</p>
+                        <p>Dans le cadre de la mutualisation de leurs systèmes d’information, la Caisse de Sécurité Sociale du Sénégal (CSS) et l’Institution de Prévoyance Retraite du Sénégal (IPRES) ont développé et exploitent la Plateforme en ligne <a class="text-red">{{appName}} </a> accessible à l’adresse <a class="text-red">{{appHost}}</a> Cette Plateforme est destinée à proposer aux usagers de la CSS et de l’IPRES un accès en ligne à leurs services, prestations et informations.</p>
                     </div> <!-- widget item 1 -->
                 </div>
                 <div class="col-lg-3 offset-lg-1 col-md-5">
@@ -18,9 +15,9 @@ la Loi 75-50 du 03 Avril 1975 relative aux Institutions de Prévoyance Sociale,<
                         <div class="footer-list">
                             <ul>
                                 <li><a href="#"><i class="fal fa-angle-right"></i> Accuel</a></li>
-                                <li><a href="#"><i class="fal fa-angle-right"></i> Espace salariés</a></li>
-                                <li><a href="#"><i class="fal fa-angle-right"></i> Espace employeur</a></li>
-                                <li><a href="#"><i class="fal fa-angle-right"></i> Espace allocataire</a></li>
+                                <li><a [routerLink]="['/employe-details']"><i class="fal fa-angle-right"></i> Espace salariés</a></li>
+                                <li><a [routerLink]="['/employeur-details']"><i class="fal fa-angle-right"></i> Espace employeur</a></li>
+                                <li><a [routerLink]="['/allocataire-details']"><i class="fal fa-angle-right"></i> Espace allocataire</a></li>
                                 <li><a href="#"><i class="fal fa-angle-right"></i> Termes et conditions</a></li>
                             </ul>
 

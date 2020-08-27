@@ -3,6 +3,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import {NgForm} from '@angular/forms';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { environment } from 'src/environments/environment';
+import { Router } from '@angular/router';
 declare let $: any;
 
 @Component({
@@ -24,7 +25,7 @@ export class RegisterComponent implements OnInit {
   };
   @ViewChild('confirmSwal') private confirmSwal: SwalComponent;
   @ViewChild('loaderSwal') private loaderSwal: SwalComponent;
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -48,9 +49,10 @@ export class RegisterComponent implements OnInit {
          this.swalOpt.text = " Votre compte a été bien enregistré. Veuillez vérifier votre boite mail pour l'activation";
          this.swalOpt.icon = "success";
          accountF.reset();
+         this.router.navigate(['/']);
        }else{
          this.swalOpt.title = "Erreur";
-         this.swalOpt.text = "Quelque chose a mal fonctionné. Veuillez vérifier vos champs et réessayer SVP";
+         this.swalOpt.text = "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier vos champs et réessayer SVP";
          this.swalOpt.icon = "error";
        }
        setTimeout(() => {
@@ -60,7 +62,7 @@ export class RegisterComponent implements OnInit {
      }, error => {
        $('.preloader').fadeOut('slow');
        this.swalOpt.title = "Erreur";
-       this.swalOpt.text = "Quelque chose a mal fonctionné. Veuillez vérifier vos champs et réessayer SVP";
+       this.swalOpt.text = "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier  réessayer plutard SVP";
        this.swalOpt.icon = "error";
        setTimeout(() => {
          this.loaderSwal.fire();
@@ -79,6 +81,6 @@ export class Account{
   email: string;
   login: string;
   typeCompte: string;
-  activationFrontUrl: string = environment.appUrl+'change-password';
+  activationFrontUrl: string = environment.appUrl+'activate';
 
 }
