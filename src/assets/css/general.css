@@ -12,7 +12,7 @@
     background-color: var(--rouge);
 }
 .contact-us-area .contact-overlay {
-    background-color: var(--orange);
+    background-color: var(--orange2) !important;
 }
 .contact-us-area .contact-overlay .contact-details .contact-form-area .input-box button {
   border-color: var(--rouge);
@@ -45,7 +45,7 @@
   background: var(--rouge);
 }
 .our-choose-area .our-choose-counter-area .our-choose-counter sub{
-  color: var(--bleu);
+  color: var(--rouge) !important;
 }
 .latest-news-area .letast-news-grid .letest-news-item > a{
   border-color: var(--orange2);
@@ -68,7 +68,6 @@
   height: 46px;
   outline: none !important;
   box-shadow: none !important;
-  border-color: #fff !important;
 }
 
 .register-form .input-box label{
@@ -118,13 +117,14 @@ label{
   padding: 0 !important;
 }
 .text-red{
-  color: var(--rouge);
+  color: var(--rouge) !important;
 }
 .single-banner .banner-overlay .banner-content .title{
   font-size: 4.2em;
 }
-.preloader{
-  background: var(--orange);
+.preloader,
+.services-title-area{
+  background: var(--orange) !important;
 }
 .page-title-area{
   height: 24em;

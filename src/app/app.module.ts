@@ -43,6 +43,8 @@ import { ChangeInputDirective } from './directive/change-input.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
+import { EmployeeComponent } from './components/pages/employee/employee.component';
+import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
 
 @NgModule({
   declarations: [
@@ -81,6 +83,8 @@ import { ChangePasswordComponent } from './components/pages/change-password/chan
     TeamdetailComponent,
     RegisterComponent,
     ChangePasswordComponent,
+    EmployeeComponent,
+    AllocataireComponent,
     FocusDirective,
     ChangeInputDirective
   ],
