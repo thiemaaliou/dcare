@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -93,8 +94,12 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBA4DCiUPSZCiyvOoVAVeA2WzY7EihCNgc'
+    })
   ],
+  
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
