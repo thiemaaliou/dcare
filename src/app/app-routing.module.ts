@@ -9,7 +9,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { BlogstandardComponent } from './components/pages/blogstandard/blogstandard.component';
-import { CasedetailsComponent } from './components/pages/casedetails/casedetails.component';
+import { AgencesComponent } from './components/pages/agences/agences.component';
 import { CasestudyComponent } from './components/pages/casestudy/casestudy.component';
 import { ComingsoomComponent } from './components/pages/comingsoom/comingsoom.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
@@ -59,7 +59,7 @@ const routes: Routes = [
     path:'blog',component:BlogstandardComponent
   },
   {
-    path:'case-detail',component:CasedetailsComponent
+    path:'agences',component: AgencesComponent
   },
   {
     path:'case-study',component:CasestudyComponent

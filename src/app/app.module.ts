@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { BlogstandardComponent } from './components/pages/blogstandard/blogstandard.component';
-import { CasedetailsComponent } from './components/pages/casedetails/casedetails.component';
+import { AgencesComponent } from './components/pages/agences/agences.component';
 import { CasestudyComponent } from './components/pages/casestudy/casestudy.component';
 import { ComingsoomComponent } from './components/pages/comingsoom/comingsoom.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
@@ -64,7 +65,7 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     BlogdetailsComponent,
     BloggridComponent,
     BlogstandardComponent,
-    CasedetailsComponent,
+    AgencesComponent,
     CasestudyComponent,
     ComingsoomComponent,
     ContactComponent,
@@ -93,8 +94,12 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyAwMP4QNMrB3z7ozZAMKOb1sQpk5eKJLFg'
+    })
   ],
+
   providers: [AuthService],
   bootstrap: [AppComponent]
 })

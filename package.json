@@ -11,6 +11,7 @@
   },
   "private": true,
   "dependencies": {
+    "@agm/core": "^3.0.0-beta.0",
     "@angular/animations": "~9.1.11",
     "@angular/common": "~9.1.11",
     "@angular/compiler": "~9.1.11",
@@ -20,6 +21,7 @@
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
     "@sweetalert2/ngx-sweetalert2": "^8.1.1",
+    "@types/google-maps": "^3.2.2",
     "rxjs": "~6.5.4",
     "sweetalert2": "^9.17.1",
     "tslib": "^1.10.0",
