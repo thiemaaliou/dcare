@@ -20,4 +20,8 @@ export class AuthService {
   activateAccount(key: string){
     return this.http.get(environment.apiUrl+'activate?key='+key).pipe(response => response);
   }
+
+  getReseaux(){
+    return this.http.get('/assets/jsons/reseauAgence.json').pipe(response => response);
+  }
 }

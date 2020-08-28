@@ -1,0 +1,23 @@
+import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
+@Component({
+  selector: 'app-agences',
+  templateUrl: './agences.component.html',
+  styleUrls: ['./agences.component.css']
+})
+export class AgencesComponent implements OnInit {
+  lat = 14.499454;
+  lng = -14.4455614;
+  agences: any = [];
+  constructor(private authService: AuthService) { }
+
+  ngOnInit(): void {
+    this.authService.getReseaux().subscribe((resp) =>{
+      this.agences = resp;
+    });
+  }
+  getDataLocation(event, loc){
+    console.log(event, loc)
+  }
+
+}

@@ -20,7 +20,7 @@ import { AboutComponent } from './components/pages/about/about.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { BlogstandardComponent } from './components/pages/blogstandard/blogstandard.component';
-import { CasedetailsComponent } from './components/pages/casedetails/casedetails.component';
+import { AgencesComponent } from './components/pages/agences/agences.component';
 import { CasestudyComponent } from './components/pages/casestudy/casestudy.component';
 import { ComingsoomComponent } from './components/pages/comingsoom/comingsoom.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
@@ -65,7 +65,7 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     BlogdetailsComponent,
     BloggridComponent,
     BlogstandardComponent,
-    CasedetailsComponent,
+    AgencesComponent,
     CasestudyComponent,
     ComingsoomComponent,
     ContactComponent,
@@ -96,10 +96,10 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     HttpClientModule,
     SweetAlert2Module.forRoot(),
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBA4DCiUPSZCiyvOoVAVeA2WzY7EihCNgc'
+      apiKey: 'AIzaSyAwMP4QNMrB3z7ozZAMKOb1sQpk5eKJLFg'
     })
   ],
-  
+
   providers: [AuthService],
   bootstrap: [AppComponent]
 })

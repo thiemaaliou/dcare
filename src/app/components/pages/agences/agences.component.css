@@ -1,0 +1,9 @@
+agm-map {
+  height: 800px;
+}
+.page-title-area {
+    height: 18em;
+}
+.page-title-area .page-title-item {
+    padding-top: 6em;
+}

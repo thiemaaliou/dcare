@@ -183,3 +183,10 @@ label{
 .blog-sidebar-area .blog-sidebar-item .sidebar-title .title::after{
   background: var(--orange);
 }
+.line-item-marker{
+  min-height: 38px;
+}
+.line-item-marker .col-lg-8{
+  color: #000;
+  font-weight: 500;
+}

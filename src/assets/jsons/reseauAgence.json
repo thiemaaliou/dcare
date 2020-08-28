@@ -1,0 +1,213 @@
+{
+  "IPRES": [
+    {
+      "title": "Dakar - Point E",
+      "address": "Rue Kaolack x Rue Fatick",
+      "phone": "(+221) 33 839 68 00",
+      "fax": "(+221) 33 839 68 00",
+      "postalCode": "21830",
+      "lat": 14.6964782,
+      "long": -17.4641817
+    }, {
+      "title": "Pikine",
+      "address": "Rue Dominique angle Tally Boumack",
+      "phone": "(+221) 33 879 12 31",
+      "fax": "(+221) 33 879 12 31",
+      "postalCode": "100",
+      "lat": 14.751544,
+      "long": -17.396413
+    },
+    {
+      "title": "Rufisque",
+      "address": "keury Kao, Rufisque Est angle Adama LO",
+      "phone": "(+221) 33 879 20 01",
+      "fax": "(+221) 33 879 20 01",
+      "postalCode": "145",
+      "lat": 14.716417,
+      "long": -17.273844
+    }, {
+      "title": "Thiés",
+      "address": "Quartier Escale",
+      "phone": "(+221) 33 939 78 00",
+      "fax": "(+221) 33 939 78 00",
+      "postalCode": "145"
+    },{
+      "title": "Diourbel",
+      "address": "Quartier Thierno KANDJI",
+      "phone": "(+221) 33 939 01 70",
+      "fax": "(+221) 33 939 01 70",
+      "postalCode": "48"
+    },{
+      "title": "Saint-Louis",
+      "address": "Rue de France x LAUZIN",
+      "phone": "(+221) 33 961 17 17",
+      "fax": "(+221) 33 961 17 17",
+      "postalCode": "253"
+    },{
+      "title": "RICHARD TOLL",
+      "address": "Immeuble Socosti face Gendarmerie, porte EST Rte Nationale",
+      "phone": "(+221) 33 963 32 75",
+      "fax": "(+221) 33 963 32 75",
+      "postalCode": "253"
+    },{
+      "title": "Fatick",
+      "address": "Quartier Escale, près du marché",
+      "phone": "(+221) 33 949 27 00",
+      "fax": "(+221) 33 949 27 00",
+      "postalCode": "170"
+    },{
+      "title": "Kaolack",
+      "address": "Quartier Sara Ndiougary",
+      "phone": "(+221) 33 938 43 00",
+      "fax": "(+221) 33 938 43 00",
+      "postalCode": ""
+    },{
+      "title": "Kédougou",
+      "address": "Compagnie Lot N°429",
+      "phone": "(+221) 33 985 17 07",
+      "fax": "(+221) 33 985 17 07",
+      "postalCode": ""
+    },{
+      "title": "Kolda",
+      "address": "Quartier Sara Moussa N°119",
+      "phone": "(+221) 33 938 81 50",
+      "fax": "(+221) 33 938 81 50",
+      "postalCode": ""
+    },{
+      "title": "Louga",
+      "address": "Avenue De La Gare",
+      "phone": "(+221) 33 987 01 86",
+      "fax": "(+221) 33 987 01 86",
+      "postalCode": ""
+    },{
+      "title": "Tambacounda",
+      "address": "Quartier Liberté Lot N°67 NE",
+      "phone": "(+221) 33 981 13 40",
+      "fax": "(+221) 33 981 11 69",
+      "postalCode": ""
+    },{
+      "title": "Podor",
+      "address": "Quartier Amadou SY Lao DEMBA",
+      "phone": "(+221) 33 965 16 16",
+      "fax": "(+221) 33 965 16 16",
+      "postalCode": ""
+    },{
+      "title": "Matam",
+      "address": "Tantadji, Im. Messa THIAM",
+      "phone": "(+221) 33 966 23 66",
+      "fax": "(+221) 33 966 23 66",
+      "postalCode": ""
+    },{
+      "title": "Mbour",
+      "address": "Quartier Mbour Toucouleur",
+      "phone": "(+221) 33 939 72 12",
+      "fax": "(+221) 33 939 72 12",
+      "postalCode": "866"
+    },{
+      "title": "Ziguinchor",
+      "address": "Quartier Néma",
+      "phone": "(+221) 33 938 12 12",
+      "fax": "(+221) 33 938 12 12",
+      "postalCode": "273"
+    }
+  ],
+  "CSS": [
+    {
+      "title": "Dakar - Plateau",
+      "address": "2 Boulevard Canal VI, Dakar",
+      "phone": "(+221) 33 889 19 89",
+      "fax": "(+221) 33 889 19 89",
+      "postalCode": "21830"
+    }, {
+      "title": "Dakar - Port",
+      "address": "20, Bd Djily MBAYE",
+      "phone": "(+221) 33 823 83 01",
+      "fax": "(+221) 33 823 52 59",
+      "postalCode": "4101"
+    }, {
+      "title": "Pikine-Guédiawaye",
+      "address": "Quartier Médina Gounass",
+      "phone": "(+221) 33 837 03 01",
+      "fax": "(+221) 33 836 03 01",
+      "postalCode": "100",
+      "lat": 14.7771207,
+      "long": -17.390071
+    }, {
+      "title": "Rufisque",
+      "address": "Rue Kounoune",
+      "phone": "(+221) 33 836 33 90",
+      "fax": "(+221) 33 836 15 64",
+      "postalCode": "145"
+    },{
+      "title": "Thiés",
+      "address": "Av. Houphouet Boigny",
+      "phone": "(+221) 33 951 12 64",
+      "fax": "(+221) 33 951 31 64",
+      "postalCode": "145",
+      "lat": 14.7948093,
+      "long": -16.9529272
+    },{
+      "title": "Diourbel",
+      "address": "Quartier Escale Lot n°293 ",
+      "phone": "(+221) 33 971 17 58",
+      "fax": "(+221) 33 971 17 58",
+      "postalCode": "48"
+    },{
+      "title": "Saint-Louis",
+      "address": "Rue de France - Nord",
+      "phone": "(+221) 33 961 14 35",
+      "fax": "(+221) 33 961 59 04",
+      "postalCode": "253"
+    },{
+      "title": "Kaolack",
+      "address": "Rue Cheick Ibra Fal",
+      "phone": "(+221) 33 941 13 13",
+      "fax": "(+221) 33 941 13 14",
+      "postalCode": "52",
+      "lat": 13.9631756,
+      "long": -15.7888834
+    },{
+      "title": "Ziguinchor",
+      "address": "Rue de la Poste",
+      "phone": "(+221) 33 991 36 55",
+      "fax": "(+221) 33 991 12 82",
+      "postalCode": "70"
+    },{
+      "title": "RICHARD - TOLL",
+      "address": "Route Nationale",
+      "phone": "(+221) 33 963 34 68",
+      "fax": "(+221) 33 963 35 76",
+      "postalCode": "69"
+    },{
+      "title": "Kolda",
+      "address": "Quartier Escale",
+      "phone": "(+221) 33 996 12 38",
+      "fax": "(+221) 33 996 12 38",
+      "postalCode": "165"
+    },{
+      "title": "Tambacounda",
+      "address": "Quartier Liberté",
+      "phone": "(+221) 33 981 11 29",
+      "fax": "(+221) 33 981 25 32",
+      "postalCode": "164"
+    },{
+      "title": "Mbour",
+      "address": "Quartier Escale",
+      "phone": "(+221) 33 957 38 71",
+      "fax": "(+221) 33 957 39 15",
+      "postalCode": "1416"
+    },{
+      "title": "Louga",
+      "address": "Grand Louga Bd de la Gouvernance",
+      "phone": "(+221) 33 967 10 54",
+      "fax": "(+221) 33 967 10 54",
+      "postalCode": "312"
+    },{
+      "title": "Ziguinchor",
+      "address": "Santhiaba, lot 543 en face Poste de santé",
+      "phone": "(+221) 33 991 11 02",
+      "fax": "(+221) 33 991 29 98",
+      "postalCode": "273"
+    }
+  ]
+}
