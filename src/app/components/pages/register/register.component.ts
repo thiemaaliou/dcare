@@ -5,6 +5,7 @@ import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 import { PlatformLocation } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 declare let $: any;
 
 @Component({
@@ -27,7 +28,7 @@ export class RegisterComponent implements OnInit {
   };
   @ViewChild('confirmSwal') private confirmSwal: SwalComponent;
   @ViewChild('loaderSwal') private loaderSwal: SwalComponent;
-  constructor(private authService: AuthService, private router: Router, private plf: PlatformLocation) { }
+  constructor(private authService: AuthService, private router: Router, private plf: PlatformLocation, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     console.log(this.plf.protocol+'//'+this.plf.hostname+':'+this.plf.port+'/activate');
@@ -48,33 +49,27 @@ export class RegisterComponent implements OnInit {
       this.authService.register(this.user).subscribe((resp) => {
        $('.preloader').fadeOut('slow');
        if(resp['code'] == 200){
-         this.swalOpt.title = "Traitement effectué avec succès";
-         this.swalOpt.text = " Votre compte a été bien enregistré. Veuillez vérifier votre boite mail pour l'activation";
-         this.swalOpt.icon = "success";
+         this.toastr.success(
+           " Votre compte a été bien enregistré. Veuillez vérifier votre boite mail pour l'activation",
+           "Traitement effectué avec succès"
+         );
          setTimeout(() => {
-           this.loaderSwal.fire();
-         }, 400);
-         accountF.reset();
-         this.router.navigate(['/']);
+           accountF.reset();
+           this.router.navigate(['/']);
+         }, 2000);
        }else{
-         this.swalOpt.title = "Erreur";
-         this.swalOpt.text = "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier vos champs et réessayer SVP";
-         this.swalOpt.icon = "error";
-         setTimeout(() => {
-           this.loaderSwal.fire();
-         }, 400);
+         this.toastr.error(
+           "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier vos champs et réessayer SVP",
+           "Erreur"
+         );
        }
-
 
      }, error => {
        $('.preloader').fadeOut('slow');
-       this.swalOpt.title = "Erreur";
-       this.swalOpt.text = "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier  réessayer plutard SVP";
-       this.swalOpt.icon = "error";
-       setTimeout(() => {
-         this.loaderSwal.fire();
-       }, 400);
-
+       this.toastr.error(
+          "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier  réessayer plutard SVP",
+         "Erreur"
+       );
      });
   }
 
