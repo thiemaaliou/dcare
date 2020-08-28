@@ -70,6 +70,20 @@
                                            Le type de compte est obligatoire
                                         </div>
                                     </div>
+                                    <div class="col-lg-6 mt-50">
+                                        <div class="input-box d-flex mt-30">
+                                          <input type="checkbox" name="acceptCondition" [(ngModel)]="user.acceptCondition" class="custom-checkbox"> J'accepte les  <b (click)="showTermesConditions()" class="terms-href"> conditions générales</b>
+                                        </div>
+                                        <!-- <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.acceptCondition.status == 'INVALID' )">
+                                           Vous devez accepter les conditions générales d'utilisations
+                                        </div> -->
+                                    </div>
+                                    <div class="col-lg-6 mt-50"></div>
+                                    <div class="col-lg-6 mt-50">
+                                        <div class="error" [class.show]="accountForm.submitted && !user.acceptCondition">
+                                           Vous devez accepter les conditions générales d'utilisations
+                                        </div>
+                                    </div>
 
 
                                     <div class="col-lg-12">
@@ -86,10 +100,11 @@
         </div> <!-- container -->
     </div>
 </div>
+<app-terms [display]="displayTerms" (closedTerms)="responseUserFromTermes($event)"></app-terms>
 <swal
   #confirmSwal
   title="Voulez-vous confirmer votre inscription"
-  text="En cliquant sur Valider, vous accpeter la création de compte sur notre plateforme."
+  text="En cliquant sur Valider, vous accepetez la création de compte sur notre plateforme."
   icon="question"
   [showCancelButton]="true"
   [confirmButtonText]="'Valider'"

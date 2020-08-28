@@ -46,6 +46,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
+import { TermsComponent } from './components/pages/terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
     ChangePasswordComponent,
     EmployeeComponent,
     AllocataireComponent,
+    TermsComponent,
     FocusDirective,
     ChangeInputDirective
   ],
