@@ -4,6 +4,7 @@ import {NgForm} from '@angular/forms';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
+import { PlatformLocation } from '@angular/common';
 declare let $: any;
 
 @Component({
@@ -26,10 +27,10 @@ export class RegisterComponent implements OnInit {
   };
   @ViewChild('confirmSwal') private confirmSwal: SwalComponent;
   @ViewChild('loaderSwal') private loaderSwal: SwalComponent;
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private plf: PlatformLocation) { }
 
   ngOnInit(): void {
-
+    console.log(this.plf.protocol+'//'+this.plf.hostname+':'+this.plf.port+'/activate');
   }
   ngAfterViewInit(): void {
   //  this.loaderSwal.fire();
@@ -43,7 +44,8 @@ export class RegisterComponent implements OnInit {
 
   processRegister(accountF: NgForm){
       $('.preloader').fadeIn('slow');
-     this.authService.register(this.user).subscribe((resp) => {
+      this.user.activationFrontUrl = this.plf.protocol+'//'+this.plf.hostname+':'+this.plf.port+'/activate';
+      this.authService.register(this.user).subscribe((resp) => {
        $('.preloader').fadeOut('slow');
        if(resp['code'] == 200){
          this.swalOpt.title = "Traitement effectué avec succès";
