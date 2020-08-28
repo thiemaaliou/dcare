@@ -13,3 +13,11 @@
 .container{
   max-width: 1000px;
 }
+.custom-checkbox{
+  width: 25px !important;
+}
+.terms-href{
+  color: orange !important;
+  cursor: pointer;
+  margin-left: 8px;
+}

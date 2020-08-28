@@ -1,0 +1,58 @@
+p b{
+  color: orange;
+}
+.blog-standard-area{
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.3s;
+  padding: 0 !important;
+}
+.blog-standard-area.show{
+  top: 0;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  position: fixed !important;
+  background-color: #0005;
+}
+
+.blog-standard-area.show .container{
+  max-width: 750px;
+  background: #fff;
+  height: 90%;
+  overflow-y: scroll;
+  margin: 50px auto;
+  border-radius: 10px;
+}
+.blog-standard-area.show .blog-dteails-content{
+  border: none !important;
+}
+.custom-btn{
+  margin: 20px auto;
+  min-width: 200px;
+  border-radius: 30px;
+  min-height: 50px;
+  background: #ff9215;
+  border-color: #ff9215;
+  font-size: 24px;
+}
+
+i.close{
+    height: 40px;
+    width: 40px;
+    border: 2px solid #ccc;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 99;
+    background-color: #a00a0a;
+    color: #fff;
+}
+.justify-content-center{
+  position: relative;
+}

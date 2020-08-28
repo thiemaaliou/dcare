@@ -40,7 +40,7 @@
                     <i class="fal fa-laptop-code"></i>
                     <h5 class="title">Travaillez en sécurité</h5>
                     <p>Accidents du travail et les maladies professionnelles</p>
-                    <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
+                    <a><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
@@ -48,7 +48,7 @@
                     <i class="fal fa-fingerprint"></i>
                     <h5 class="title">Prestations familiales</h5>
                     <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
-                    <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
+                    <a ><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
@@ -56,7 +56,7 @@
                     <i class="fal fa-chalkboard"></i>
                     <h5 class="title">Vieillesse et Retraites</h5>
                     <p>Sed ut perspiciatis unde omnis iste natus error volup</p>
-                    <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
+                    <a ><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
             <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="2s" data-wow-delay="0s">
@@ -64,7 +64,7 @@
                     <i class="fal fa-database"></i>
                     <h5 class="title">Prenez votre retraite</h5>
                     <p>En toute quietude en vous ayant souscrire a IPRES</p>
-                    <a routerLink='/case-detail'><i class="fal fa-long-arrow-right"></i></a>
+                    <a ><i class="fal fa-long-arrow-right"></i></a>
                 </div> <!-- what we do item -->
             </div>
         </div> <!-- row -->
@@ -94,7 +94,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="solution-play text-right mr-30 d-none d-lg-block">
-                        <a class="video-popup" href="https://www.youtube.com/watch?time_continue=11&v=k8d5_3hhgJk&feature=emb_logo" ><i class="fas fa-play"></i></a>
+                        <a class="video-popup" href="https://www.youtube.com/k8d5_3hhgJk" ><i class="fas fa-play"></i></a>
                     </div> <!-- solution play -->
                 </div>
             </div> <!-- row -->
@@ -139,7 +139,7 @@
                     <div class="services-content">
                         <h4 class="title">ESPACE SALARIÉ</h4>
                         <p>Le salarié est une personne qui s'engage à exécuter un travail, à temps plein ou à temps partiel, pour le compte d'un employeur, en contrepartie d'un salaire ou d'un traitement</p>
-                        <a href="#employe">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+                        <a [routerLink]="['/employe-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -151,7 +151,7 @@
                     <div class="services-content">
                         <h4 class="title">ESPACE ALLOCATAIRE</h4>
                         <p>Les allocataires des Caisses d'Allocations Familiales sont les personnes qui perçoivent au moins une allocation en regard de leur situation familiale et/ou monétaire.</p>
-                        <a href="#allocataire">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+                        <a [routerLink]="['/allocataire-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
                     </div>
                 </div> <!-- single services -->
             </div>
@@ -164,9 +164,9 @@
         <div class="row justify-content-center">
             <div class="col-lg-8">
                 <div class="section-title text-center">
-                    <span></span>
+                    <span [routerLink]="['/employeur-details']"> Voir plus <i class="fal fa-long-arrow-right"></i></span>
                     <h2 class="title">En tant qu'employeur</h2>
-                    <p>Vous pouvez faire : </p>
+
                 </div>
             </div>
         </div>
@@ -197,7 +197,7 @@
             <div class="col-lg-5">
                 <div class="section-title">
                   <h2 class="title">Allocataire </h2>
-                  <span>Voir tout <i class="fal fa-long-arrow-right"></i> </span>
+                  <span [routerLink]="['/allocataire-details']">Voir tout <i class="fal fa-long-arrow-right"></i> </span>
                 </div> <!-- section title -->
             </div>
         </div> <!-- row -->
@@ -225,7 +225,7 @@
         <div class="row">
             <div class="col-lg-5">
                 <div class="section-title">
-                    <span>Vous avez les possibilités suivantes en tant que </span>
+                    <span [routerLink]="['/employe-details']">Voir plus <i class="fal fa-long-arrow-right"></i></span>
                     <h2 class="title">EMPLOYE </h2>
                 </div> <!-- section title -->
             </div>
@@ -252,7 +252,7 @@
                 <div class="col-lg-6">
                     <div class="section-title text-center">
                         <span>Contactez-nous</span>
-                        <h2 class="title">Nous rejoindre pour souscrire a IPRES</h2>
+                        <h2 class="title">Nous rejoindre en remplissant le formulaire</h2>
                     </div> <!-- sevtion title -->
                 </div>
             </div> <!-- row -->
@@ -267,7 +267,7 @@
                         <div class="contact-form-area">
                             <form action="#">
                                 <div class="input-title">
-                                    <h3 class="title">Ne perdez pas de temps......</h3>
+                                    <h3 class="title">Remplissez les champs</h3>
                                 </div> <!-- input title -->
                                 <div class="row">
                                     <div class="col-lg-6">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="section-title mt-30">
-                    <span>IPRES CNSS</span>
+                    <span>IPRES CSS</span>
                     <h2 class="title">En quelques chiffres</h2>
                 </div>
             </div>
@@ -360,7 +360,7 @@
             <div class="col-lg-6">
                 <div class="section-title text-center">
                     <span>Blog</span>
-                    <h2 class="title">Dernieres publications</h2>
+                    <h2 class="title">Dernières publications</h2>
                 </div> <!-- sction title -->
             </div>
         </div> <!-- row -->

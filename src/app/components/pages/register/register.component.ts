@@ -12,6 +12,7 @@ declare let $: any;
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
+  displayTerms: boolean = false;
   accoutType = [
     {id: 'EMPLOYEUR', name: "Employeur"},
     {id: 'EMPLOYE', name: "Employé"},
@@ -34,7 +35,7 @@ export class RegisterComponent implements OnInit {
   //  this.loaderSwal.fire();
   }
   checkForm(accountF: NgForm){
-    if(accountF.invalid)
+    if(accountF.invalid || !this.user.acceptCondition)
       return false;
     else
       this.confirmSwal.fire();
@@ -48,16 +49,20 @@ export class RegisterComponent implements OnInit {
          this.swalOpt.title = "Traitement effectué avec succès";
          this.swalOpt.text = " Votre compte a été bien enregistré. Veuillez vérifier votre boite mail pour l'activation";
          this.swalOpt.icon = "success";
+         setTimeout(() => {
+           this.loaderSwal.fire();
+         }, 400);
          accountF.reset();
          this.router.navigate(['/']);
        }else{
          this.swalOpt.title = "Erreur";
          this.swalOpt.text = "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier vos champs et réessayer SVP";
          this.swalOpt.icon = "error";
+         setTimeout(() => {
+           this.loaderSwal.fire();
+         }, 400);
        }
-       setTimeout(() => {
-         this.loaderSwal.fire();
-       }, 300);
+
 
      }, error => {
        $('.preloader').fadeOut('slow');
@@ -66,9 +71,18 @@ export class RegisterComponent implements OnInit {
        this.swalOpt.icon = "error";
        setTimeout(() => {
          this.loaderSwal.fire();
-       }, 300);
+       }, 400);
 
      });
+  }
+
+  showTermesConditions(){
+    this.displayTerms = true;
+  }
+
+  responseUserFromTermes(event: boolean){
+    this.displayTerms = false;
+    this.user.acceptCondition = event;
   }
 
 }
@@ -81,6 +95,7 @@ export class Account{
   email: string;
   login: string;
   typeCompte: string;
+  acceptCondition: boolean = false;
   activationFrontUrl: string = environment.appUrl+'activate';
 
 }
