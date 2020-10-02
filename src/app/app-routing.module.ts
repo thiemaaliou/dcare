@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
-import { AboutComponent } from './components/pages/about/about.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { AgencesComponent } from './components/pages/agences/agences.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ServicesComponent } from './components/pages/services/services.component';
 import { ServicedetailComponent } from './components/pages/servicedetail/servicedetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
@@ -19,9 +17,6 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
 const routes: Routes = [
   {
     path:'',component:HomeComponent
-  },
-  {
-    path:'about',component:AboutComponent
   },
   {
     path:'employeur-details',component: BlogdetailsComponent
@@ -43,9 +38,6 @@ const routes: Routes = [
   },
   {
     path:'contact-us',component:ContactComponent
-  },
-  {
-    path:'pricing',component:PricingComponent
   },
   {
     path:'services',component:ServicesComponent

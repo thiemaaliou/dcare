@@ -31,10 +31,14 @@ export class RegisterComponent implements OnInit {
   constructor(private authService: AuthService, private router: Router, private plf: PlatformLocation, private toastr: ToastrService) { }
 
   ngOnInit(): void {
-    console.log(this.plf.protocol+'//'+this.plf.hostname+':'+this.plf.port+'/activate');
+    let port =( this.plf.port && Number(this.plf.port) > 0 )? ':'+this.plf.port : '';
+    console.log(this.plf.protocol+'//'+this.plf.hostname+port+'/activate');
+    console.log(this.plf);
+    const ltindex = this.plf['location']['href'].lastIndexOf('/');
+    const pt = this.plf['location']['href'].substring(0, ltindex)+'/activate';
+    console.log(pt);
   }
   ngAfterViewInit(): void {
-  //  this.loaderSwal.fire();
   }
   checkForm(accountF: NgForm){
     if(accountF.invalid || !this.user.acceptCondition)
@@ -45,7 +49,12 @@ export class RegisterComponent implements OnInit {
 
   processRegister(accountF: NgForm){
       $('.preloader').fadeIn('slow');
-      this.user.activationFrontUrl = this.plf.protocol+'//'+this.plf.hostname+':'+this.plf.port+'/activate';
+
+    //  let port =( this.plf.port && Number(this.plf.port) > 0 )? ':'+this.plf.port : '';
+    //  this.user.activationFrontUrl = this.plf.protocol+'//'+this.plf.hostname+port+'/activate';
+    const ltindex = this.plf['location']['href'].lastIndexOf('/');
+    this.user.activationFrontUrl = this.plf['location']['href'].substring(0, ltindex)+'/activate';
+
       this.authService.register(this.user).subscribe((resp) => {
        $('.preloader').fadeOut('slow');
        if(resp['code'] == 200){
