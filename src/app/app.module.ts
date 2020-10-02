@@ -21,24 +21,13 @@ import { Footer4Component } from './components/layouts/footer4/footer4.component
 import { AboutComponent } from './components/pages/about/about.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
-import { BlogstandardComponent } from './components/pages/blogstandard/blogstandard.component';
 import { AgencesComponent } from './components/pages/agences/agences.component';
-import { CasestudyComponent } from './components/pages/casestudy/casestudy.component';
-import { ComingsoomComponent } from './components/pages/comingsoom/comingsoom.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { ErrorComponent } from './components/pages/error/error.component';
 import { FaqComponent } from './components/pages/faq/faq.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { Home2Component } from './components/pages/home2/home2.component';
-import { Home3Component } from './components/pages/home3/home3.component';
-import { Home4Component } from './components/pages/home4/home4.component';
 import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ServicesComponent } from './components/pages/services/services.component';
 import { ServicedetailComponent } from './components/pages/servicedetail/servicedetail.component';
-import { ShopComponent } from './components/pages/shop/shop.component';
-import { ShopdetailComponent } from './components/pages/shopdetail/shopdetail.component';
-import { TeamComponent } from './components/pages/team/team.component';
-import { TeamdetailComponent } from './components/pages/teamdetail/teamdetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { AuthService } from './services/auth.service';
 import { FocusDirective } from './directive/focus.directive';
@@ -67,24 +56,13 @@ import { TermsComponent } from './components/pages/terms/terms.component';
     AboutComponent,
     BlogdetailsComponent,
     BloggridComponent,
-    BlogstandardComponent,
     AgencesComponent,
-    CasestudyComponent,
-    ComingsoomComponent,
     ContactComponent,
-    ErrorComponent,
     FaqComponent,
     HomeComponent,
-    Home2Component,
-    Home3Component,
-    Home4Component,
     PricingComponent,
     ServicesComponent,
     ServicedetailComponent,
-    ShopComponent,
-    ShopdetailComponent,
-    TeamComponent,
-    TeamdetailComponent,
     RegisterComponent,
     ChangePasswordComponent,
     EmployeeComponent,
