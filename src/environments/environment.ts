@@ -9,8 +9,8 @@ export const environment = {
   adminAppUrl:'https://online.secusociale.sn/cssipres/',
   appName: 'IPRES-CSS',
   appHost: 'www.ipres-css.sn',
-  siteCapchatKey:  '6LfEKdgZAAAAAFQjO5GMof_Da0VCBv9LBTblsuqz',
-  siteSecretKey: '6LfEKdgZAAAAAAsZTmssEZwxNbW5iGwNRIO7D2-z'
+  siteCapchatKey:  '6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1',
+  siteSecretKey: '6Ld50NgZAAAAACrVoyYSwXBud8Wit5PsCqwcSho6'
 };
 
 /*
