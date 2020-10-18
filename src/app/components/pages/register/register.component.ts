@@ -26,17 +26,15 @@ export class RegisterComponent implements OnInit {
     text: '',
     icon: ''
   };
+  siteKey:string = environment.siteCapchatKey;
   @ViewChild('confirmSwal') private confirmSwal: SwalComponent;
   @ViewChild('loaderSwal') private loaderSwal: SwalComponent;
   constructor(private authService: AuthService, private router: Router, private plf: PlatformLocation, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     let port =( this.plf.port && Number(this.plf.port) > 0 )? ':'+this.plf.port : '';
-    console.log(this.plf.protocol+'//'+this.plf.hostname+port+'/activate');
-    console.log(this.plf);
     const ltindex = this.plf['location']['href'].lastIndexOf('/');
     const pt = this.plf['location']['href'].substring(0, ltindex)+'/activate';
-    console.log(pt);
   }
   ngAfterViewInit(): void {
   }
@@ -89,7 +87,15 @@ export class RegisterComponent implements OnInit {
   responseUserFromTermes(event: boolean){
     this.displayTerms = false;
     this.user.acceptCondition = event;
-  }
+  } handleReset() { }
+
+  handleExpire() { }
+
+  handleLoad() { }
+
+  handleSuccess(event) { }
+
+  handleError(event) {}
 
 }
 
@@ -103,5 +109,6 @@ export class Account{
   typeCompte: string;
   acceptCondition: boolean = false;
   activationFrontUrl: string = environment.appUrl+'activate';
+  recaptcha: string;
 
 }

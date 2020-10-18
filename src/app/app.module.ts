@@ -15,9 +15,7 @@ import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { AgencesComponent } from './components/pages/agences/agences.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
-import { FaqComponent } from './components/pages/faq/faq.component';
 import { HomeComponent } from './components/pages/home/home.component';
-import { PricingComponent } from './components/pages/pricing/pricing.component';
 import { ServicesComponent } from './components/pages/services/services.component';
 import { ServicedetailComponent } from './components/pages/servicedetail/servicedetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
@@ -30,7 +28,7 @@ import { ChangePasswordComponent } from './components/pages/change-password/chan
 import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
 import { TermsComponent } from './components/pages/terms/terms.component';
-
+import { NgxCaptchaModule } from 'ngx-captcha';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,9 +40,7 @@ import { TermsComponent } from './components/pages/terms/terms.component';
     BloggridComponent,
     AgencesComponent,
     ContactComponent,
-    FaqComponent,
     HomeComponent,
-    PricingComponent,
     ServicesComponent,
     ServicedetailComponent,
     RegisterComponent,
@@ -61,6 +57,7 @@ import { TermsComponent } from './components/pages/terms/terms.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    NgxCaptchaModule,
     ToastrModule.forRoot(),
     SweetAlert2Module.forRoot(),
     AgmCoreModule.forRoot({

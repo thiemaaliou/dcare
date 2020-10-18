@@ -4,7 +4,6 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
 import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { AgencesComponent } from './components/pages/agences/agences.component';
-import { FaqComponent } from './components/pages/faq/faq.component';
 import { ContactComponent } from './components/pages/contact/contact.component';
 import { ServicesComponent } from './components/pages/services/services.component';
 import { ServicedetailComponent } from './components/pages/servicedetail/servicedetail.component';
@@ -32,9 +31,6 @@ const routes: Routes = [
   },
   {
     path:'agences',component: AgencesComponent
-  },
-  {
-    path:'faqs',component:FaqComponent
   },
   {
     path:'contact-us',component:ContactComponent
