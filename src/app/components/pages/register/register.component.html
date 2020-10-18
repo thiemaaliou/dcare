@@ -171,13 +171,18 @@
                   <div class="col-lg-6 mt-50">
                     <ngx-recaptcha2
                             #accountForm
-                            [siteKey]="'6LfEKdgZAAAAAFQjO5GMof_Da0VCBv9LBTblsuqz'"
+                            [siteKey]="'6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1'"
                             [useGlobalDomain]="false"
                             [hl]="'fr'"
                             [(ngModel)]="user.recaptcha"
                             name="recaptcha"
                             required>
                     </ngx-recaptcha2>
+                    <div
+                    class="error"
+                    [class.show]="user.recaptcha==null || user.recaptcha==undefined || user.recaptcha==''">
+                    Le Capchat de compte est obligatoire
+                  </div>
                   </div>
                   <div class="col-lg-6 mt-50">
                     <div
@@ -193,11 +198,11 @@
 
                   <div class="col-lg-12">
                     <div class="input-box mt-30">
-                      <button
+                      <button 
                         class="main-btn wow slideInUp"
                         data-wow-duration="1.5s"
                         data-wow-delay="0s"
-                        type="submit"
+                        type="submit" 
                       >
                         S'inscrire <i class="fal fa-long-arrow-right"></i>
                       </button>
