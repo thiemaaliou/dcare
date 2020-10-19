@@ -9,6 +9,7 @@ import { environment } from 'src/environments/environment';
 export class FooterComponent implements OnInit {
   appName: string = environment.appName;
   appHost: string = environment.appHost;
+  footerText: any = environment.footerText;
   constructor() { }
 
   ngOnInit(): void {

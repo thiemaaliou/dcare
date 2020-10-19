@@ -1,106 +1,230 @@
 <app-header></app-header>
 
 <!--====== PAGE TITLE PART ENDS ======-->
-<div class="contact-us-area bg_cover" style="background-image: url(assets/images/banner-gradient-bg-2.png)">
-    <div class="contact-overlay">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title text-center pt-5">
-                        <h2 class="title">Inscription</h2>
-                    </div> <!-- sevtion title -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-details d-flex">
-                        <div class="contact-form-area">
-                            <form #accountForm="ngForm" class="register-form" (ngSubmit)="checkForm(accountForm)">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input appFocus required type="text" name="firstName" [(ngModel)]="user.firstName">
-                                            <label>Prénoms</label>
-                                            <i class="fal fa-user"></i>
-                                        </div> <!-- input box -->
-                                        <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.firstName.status == 'INVALID' )">
-                                           Le prénom est obligatoire
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input appFocus required type="text"  name="lastName"  [(ngModel)]="user.lastName">
-                                            <label>Nom</label>
-                                            <i class="fal fa-user"></i>
-                                        </div> <!-- input box -->
-                                        <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.lastName.status == 'INVALID' )">
-                                           Le nom est obligatoire
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-4">
-                                        <div class="input-box mt-30">
-                                            <input appFocus required type="email" name="email" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" [(ngModel)]="user.email">
-                                            <label>Email</label>
-                                            <i class="fal fa-envelope-open"></i>
-                                        </div> <!-- input box -->
-                                        <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.email.status == 'INVALID' )">
-                                           L'email est obligatoire ou invalid
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-4">
-                                        <div class="input-box mt-30">
-                                            <input appFocus required type="text" name="login" [(ngModel)]="user.login">
-                                            <label>Nom d'utilisateur</label>
-                                            <i class="fal fa-user"></i>
-                                        </div> <!-- input box -->
-                                        <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.login.status == 'INVALID' )">
-                                           Le nom d'utilisateur est obligatoire
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-4">
-                                        <div class="input-box mt-30">
-                                            <select appFocus required name="typeCompte" class="custom-select"  [(ngModel)]="user.typeCompte">
-                                              <option *ngFor="let opt of accoutType" value="{{opt?.id}}">{{opt?.name}}</option>
-                                            </select>
-                                            <label>Type de compte</label>
-                                        </div>
-                                        <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.typeCompte.status == 'INVALID' )">
-                                           Le type de compte est obligatoire
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 mt-50">
-                                        <div class="input-box d-flex mt-30">
-                                          <input type="checkbox" name="acceptCondition" [(ngModel)]="user.acceptCondition" class="custom-checkbox"> J'accepte les  <b (click)="showTermesConditions()" class="terms-href"> conditions générales</b>
-                                        </div>
-                                        <!-- <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.acceptCondition.status == 'INVALID' )">
+<div
+  class="contact-us-area bg_cover"
+  style="background-image: url(assets/images/banner-gradient-bg-2.png)"
+>
+  <div class="contact-overlay">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center pt-5">
+            <h2 class="title">Inscription</h2>
+          </div>
+          <!-- sevtion title -->
+        </div>
+      </div>
+      <!-- row -->
+    </div>
+    <!-- container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-details d-flex">
+            <div class="contact-form-area">
+              <form
+                #accountForm="ngForm"
+                class="register-form"
+                (ngSubmit)="checkForm(accountForm)"
+              >
+                
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input
+                        appFocus
+                        required
+                        type="text"
+                        name="firstName"
+                        [(ngModel)]="user.firstName"
+                      />
+                      <label>Prénoms</label>
+                      <i class="fal fa-user"></i>
+                    </div>
+                    <!-- input box -->
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted &&
+                        accountForm.form.controls.firstName.status == 'INVALID'
+                      "
+                    >
+                      Le prénom est obligatoire
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input
+                        appFocus
+                        required
+                        type="text"
+                        name="lastName"
+                        [(ngModel)]="user.lastName"
+                      />
+                      <label>Nom</label>
+                      <i class="fal fa-user"></i>
+                    </div>
+                    <!-- input box -->
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted &&
+                        accountForm.form.controls.lastName.status == 'INVALID'
+                      "
+                    >
+                      Le nom est obligatoire
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-4">
+                    <div class="input-box mt-30">
+                      <input
+                        appFocus
+                        required
+                        type="email"
+                        name="email"
+                        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                        [(ngModel)]="user.email"
+                      />
+                      <label>Email</label>
+                      <i class="fal fa-envelope-open"></i>
+                    </div>
+                    <!-- input box -->
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted &&
+                        accountForm.form.controls.email.status == 'INVALID'
+                      "
+                    >
+                      L'email est obligatoire ou invalid
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-4">
+                    <div class="input-box mt-30">
+                      <input
+                        appFocus
+                        required
+                        type="text"
+                        name="login"
+                        [(ngModel)]="user.login"
+                      />
+                      <label>Nom d'utilisateur</label>
+                      <i class="fal fa-user"></i>
+                    </div>
+                    <!-- input box -->
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted &&
+                        accountForm.form.controls.login.status == 'INVALID'
+                      "
+                    >
+                      Le nom d'utilisateur est obligatoire
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-4">
+                    <div class="input-box mt-30">
+                      <select
+                        appFocus
+                        required
+                        name="typeCompte"
+                        class="custom-select"
+                        [(ngModel)]="user.typeCompte"
+                      >
+                        <option
+                          *ngFor="let opt of accoutType"
+                          value="{{ opt?.id }}"
+                        >
+                          {{ opt?.name }}
+                        </option>
+                      </select>
+                      <label>Type de compte</label>
+                    </div>
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted &&
+                        accountForm.form.controls.typeCompte.status == 'INVALID'
+                      "
+                    >
+                      Le type de compte est obligatoire
+                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-50">
+                    <div class="input-box d-flex mt-30">
+                      <input
+                        type="checkbox"
+                        name="acceptCondition"
+                        [(ngModel)]="user.acceptCondition"
+                        class="custom-checkbox"
+                      />
+                      J'accepte les
+                      <b (click)="showTermesConditions()" class="terms-href">
+                        conditions générales</b
+                      >
+                    </div>
+                    <!-- <div class="error" [class.show]="accountForm.submitted && (accountForm.form.controls.acceptCondition.status == 'INVALID' )">
                                            Vous devez accepter les conditions générales d'utilisations
                                         </div> -->
-                                    </div>
-                                    <div class="col-lg-6 mt-50"></div>
-                                    <div class="col-lg-6 mt-50">
-                                        <div class="error" [class.show]="accountForm.submitted && !user.acceptCondition">
-                                           Vous devez accepter les conditions générales d'utilisations
-                                        </div>
-                                    </div>
+                  </div>
+                  <div class="col-lg-6 mt-50">
+                    <ngx-recaptcha2
+                            #accountForm
+                            [siteKey]="'6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1'"
+                            [useGlobalDomain]="false"
+                            [hl]="'fr'"
+                            [(ngModel)]="user.recaptcha"
+                            name="recaptcha"
+                            required>
+                    </ngx-recaptcha2>
+                    <div
+                    class="error"
+                    [class.show]="user.recaptcha==null || user.recaptcha==undefined || user.recaptcha==''">
+                    Le Capchat de compte est obligatoire
+                  </div>
+                  </div>
+                  <div class="col-lg-6 mt-50">
+                    <div
+                      class="error"
+                      [class.show]="
+                        accountForm.submitted && !user.acceptCondition
+                      "
+                    >
+                      Vous devez accepter les conditions générales
+                      d'utilisations
+                    </div>
+                  </div>
 
-
-                                    <div class="col-lg-12">
-                                        <div class="input-box mt-30">
-                                            <button class="main-btn wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s" type="submit">S'inscrire <i class="fal fa-long-arrow-right"></i></button>
-                                        </div> <!-- input box -->
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div> <!-- contact details -->
+                  <div class="col-lg-12">
+                    <div class="input-box mt-30">
+                      <button 
+                        class="main-btn wow slideInUp"
+                        data-wow-duration="1.5s"
+                        data-wow-delay="0s"
+                        type="submit" 
+                      >
+                        S'inscrire <i class="fal fa-long-arrow-right"></i>
+                      </button>
+                    </div>
+                    <!-- input box -->
+                  </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
+              </form>
+            </div>
+          </div>
+          <!-- contact details -->
+        </div>
+      </div>
+      <!-- row -->
     </div>
+    <!-- container -->
+  </div>
 </div>
-<app-terms [display]="displayTerms" (closedTerms)="responseUserFromTermes($event)"></app-terms>
+<app-terms
+  [display]="displayTerms"
+  (closedTerms)="responseUserFromTermes($event)"
+></app-terms>
 <swal
   #confirmSwal
   title="Voulez-vous confirmer votre inscription"
@@ -118,9 +242,9 @@
 
 <swal
   #loaderSwal
-  title="{{swalOpt?.title}}"
-  text="{{swalOpt?.text}}"
-  icon="{{swalOpt?.icon}}"
+  title="{{ swalOpt?.title }}"
+  text="{{ swalOpt?.text }}"
+  icon="{{ swalOpt?.icon }}"
   [showConfirmButton]="true"
   [showCancelButton]="false"
   [confirmButtonText]="'Fermer'"

@@ -26,6 +26,7 @@ import { AllocataireComponent } from './components/pages/allocataire/allocataire
 import { TermsComponent } from './components/pages/terms/terms.component';
 import { SharedModule } from './shared/shared.module';
 
+import { NgxCaptchaModule } from 'ngx-captcha';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +48,7 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     BrowserAnimationsModule,
     SharedModule,
+    NgxCaptchaModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAwMP4QNMrB3z7ozZAMKOb1sQpk5eKJLFg'
     })

@@ -22,6 +22,7 @@
     "@angular/router": "~9.1.11",
     "@sweetalert2/ngx-sweetalert2": "^8.1.1",
     "@types/google-maps": "^3.2.2",
+    "ngx-captcha": "^8.0.1",
     "ngx-toastr": "^13.0.0",
     "rxjs": "~6.5.4",
     "sweetalert2": "^9.17.1",
