@@ -7,6 +7,7 @@ import { RegisterComponent } from './components/pages/register/register.componen
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
+import { AProposComponent } from './components/pages/apropos/apropos.component';
 
 
 const routes: Routes = [
@@ -14,7 +15,7 @@ const routes: Routes = [
     path:'',component: HomeComponent
   },
   {
-    path:'employeur-details',component: BlogdetailsComponent
+    path:'apropos',component: AProposComponent
   },
   {
     path:'employeur',

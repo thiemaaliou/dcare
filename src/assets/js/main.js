@@ -318,9 +318,11 @@ $(function() {
     //====== Magnific Popup
 
     $('.video-popup').magnificPopup({
-        type: 'iframe'
+        type: 'iframe',
+        src: 'https://www.youtube.com/watch?v=FIGW4CTp-sY'
         // other options
     });
+
 
 
     //===== Magnific Popup
@@ -421,7 +423,7 @@ $(function() {
     });
 
 
-  
+
 
     //===== Wow animation js
 

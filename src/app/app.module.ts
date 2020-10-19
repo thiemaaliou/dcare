@@ -19,7 +19,6 @@ import { AuthService } from './services/auth.service';
 import { FocusDirective } from './directive/focus.directive';
 import { ChangeInputDirective } from './directive/change-input.directive';
 import { HttpClientModule } from '@angular/common/http';
-import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
@@ -27,6 +26,7 @@ import { TermsComponent } from './components/pages/terms/terms.component';
 import { SharedModule } from './shared/shared.module';
 
 import { NgxCaptchaModule } from 'ngx-captcha';
+import { AProposComponent } from './components/pages/apropos/apropos.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,7 +39,8 @@ import { NgxCaptchaModule } from 'ngx-captcha';
     TermsComponent,
     FocusDirective,
     ChangeInputDirective,
-    PreloaderComponent
+    PreloaderComponent,
+    AProposComponent
   ],
   imports: [
     BrowserModule,

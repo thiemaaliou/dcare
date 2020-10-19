@@ -22,7 +22,7 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
       CommonModule,
       RouterModule,
       ToastrModule.forRoot(),
-      SweetAlert2Module.forChild(),
+      SweetAlert2Module.forRoot(),
     ],
   exports: [
     ToastrModule,
