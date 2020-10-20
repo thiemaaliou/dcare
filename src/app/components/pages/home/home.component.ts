@@ -9,18 +9,21 @@ export class HomeComponent implements OnInit {
    slideData = [
      {
        title: "Bienvenue sur le portail<br> NDAMLI CSS/IPRES",
-       subTitle: "Vos démarches en un seul clic !",
-       description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
+       subTitle: "",
+       description: "Vos démarches en un seul clic !",
+       //description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
        img: "assets/images/bannieres-ipres-2.jpg",
-       btnText: "En savoir plus",
+       //btnText: "En savoir plus",
        btnUrl: "/employeur"
      },
      {
-       title: "Caisse de sécurité <br>sociale",
-       subTitle: "Caisse de sécurité sociale",
-       description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
+       title: "Portail numérique commun IPRES/CSS",
+       subTitle: "Vos démarches en un seul clic !",
+       description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
+
+       //description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
        img: "assets/images/bannieres-ipres-3.jpg",
-       btnText: "En savoir plus",
+      // btnText: "En savoir plus",
        btnUrl: "/employeur"
      },
      {
@@ -28,8 +31,6 @@ export class HomeComponent implements OnInit {
        subTitle: "Paiement sécurisé et rapide",
        description: "Elle dispose d'agences régionales, de centres de protection maternelle et infantile, de cliniques et de plannings familiaux. L'Institution de Prévoyance Retraites du Sénégal (IPRES) gère le régime national obligatoire d'assurance vieillesse",
        img: "assets/images/bannieres-ipres-1.jpg",
-       btnText: "En savoir plus",
-       btnUrl: "/employeur/paiement-cotisations"
      }
    ];
    employeurData = [

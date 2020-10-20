@@ -6267,7 +6267,7 @@ nav .pagination.pagination-2 li a {
     36.SOLUTION css
 ================================*/
 .solution-area .solution-overlay {
-  background-color: rgba(16, 16, 40, 0.8);
+  background-color: rgb(16 16 40 / 52%);
   padding-bottom: 355px; }
   .solution-area .solution-overlay .solution-content {
     border: 10px solid rgba(255, 255, 255, 0.15);

@@ -13,10 +13,9 @@
               <h1 [innerHTML]="slide.title" class="title" data-animation="fadeInLeft" data-delay="0.9s"></h1>
               <p data-animation="fadeInLeft" data-delay="1.3s">{{slide?.description}} </p>
 
-              <a *ngIf="!slide.isExternalUrl" [routerLink]='slide?.btnUrl' class="main-btn" data-animation="fadeInUp"
+              <a *ngIf="slide.btnText" [routerLink]='slide?.btnUrl' class="main-btn" data-animation="fadeInUp"
                  data-delay="1.6s">{{slide?.btnText}} <i class="fal fa-long-arrow-right"></i></a>
-              <a *ngIf="slide.isExternalUrl" [href]='slide?.btnUrl' class="main-btn" data-animation="fadeInUp"
-                 data-delay="1.6s" target="_blank">{{slide?.btnText}} <i class="fal fa-long-arrow-right"></i></a>
+
             </div> <!-- banner content -->
           </div>
         </div> <!-- row -->
@@ -181,7 +180,7 @@
     <div class="row justify-content-center">
       <div class="col-lg-8">
         <div class="section-title text-center">
-          <span [routerLink]="['/employeur-details']"> Voir plus <i class="fal fa-long-arrow-right"></i></span>
+          <span [routerLink]="['/employeur']"> Voir plus <i class="fal fa-long-arrow-right"></i></span>
           <h2 class="title">En tant qu'employeur</h2>
 
         </div>
@@ -244,7 +243,7 @@
       <div class="col-lg-5">
         <div class="section-title">
           <span [routerLink]="['/employe-details']">Voir plus <i class="fal fa-long-arrow-right"></i></span>
-          <h2 class="title">EMPLOYE </h2>
+          <h2 class="title">SALARIÉ </h2>
         </div> <!-- section title -->
       </div>
     </div> <!-- row -->

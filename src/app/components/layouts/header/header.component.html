@@ -12,10 +12,10 @@
                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                       <li class="nav-item">
-                          <a class="nav-link" [routerLink]="['/apropos']">Qui sommes-nous ?</a>
+                          <a class="nav-link" [class.active]="router.url == '/apropos'" [routerLink]="['/apropos']">Qui sommes-nous ?</a>
                       </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/employeur']">Employeur <i class="fas fa-chevron-down"></i></a>
+                            <a class="nav-link" [class.active]="router.url.includes('employeur')" [routerLink]="['/employeur']">Employeur <i class="fas fa-chevron-down"></i></a>
                             <ul class="sub-menu">
                                 <li><a routerLink='/employeur/creation-compte' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Création de compte</a></li>
                                 <li><a routerLink='/employeur/formalite-immatriculation' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Formalités d’immatriculation</a></li>
@@ -26,15 +26,15 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/employe-details']">Salarié</a>
+                            <a class="nav-link" [class.active]="router.url.includes('employe-details')" [routerLink]="['/employe-details']">Salarié</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/allocataire-details']">Allocataire </a>
+                            <a class="nav-link" [class.active]="router.url.includes('allocataire-details')" [routerLink]="['/allocataire-details']">Allocataire </a>
                         </li>
                     </ul>
                 </div>
                 <div class="navbar-btn mr-100 pr-3">
-                    <a class="register-btn" routerLink='/register'>Inscription</a>
+                    <a class="register-btn" routerLink='/register' [class.active]="router.url.includes('register')">Inscription</a>
                 </div>
                 <div class="navbar-btn mr-100">
                     <a class="main-btn" href="{{adminAppUrl}}">Connexion <i class="fal fa-long-arrow-right"></i></a>
