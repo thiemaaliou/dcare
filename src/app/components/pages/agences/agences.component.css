@@ -25,6 +25,6 @@ agm-map {
     border-radius: 5px;
 }
 .page-title-area::before{
-  background-image: url('../../../../assets/images/ndamli.jpg') !important;
+  background-image: url('/assets/images/ndamli.jpg') !important;
   background-size: 100% auto;
 }

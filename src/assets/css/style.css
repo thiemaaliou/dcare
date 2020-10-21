@@ -433,7 +433,7 @@ PRELOADER
           top: 100%;
           left: 0;
           width: 100%;
-          background-color: #fff;
+          background-color: #f9a444;
           z-index: 8;
           padding: 10px 16px;
           box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15); } }
@@ -443,7 +443,7 @@ PRELOADER
           top: 100%;
           left: 0;
           width: 100%;
-          background-color: #fff;
+          background-color: #f9a444;
           z-index: 8;
           padding: 10px 16px;
           box-shadow: 0 26px 48px 0 rgba(0, 0, 0, 0.15); } }
@@ -775,10 +775,10 @@ PRELOADER
         background: #fff; }
     @media only screen and (min-width: 768px) and (max-width: 991px) {
       .header-area-2.header-area-3 .header-nav .navigation .navbar .navbar-collapse {
-        background: #002249; } }
+        background: #f9a444; } }
     @media (max-width: 767px) {
       .header-area-2.header-area-3 .header-nav .navigation .navbar .navbar-collapse {
-        background: #002249; } }
+        background: #f9a444; } }
     .header-area-2.header-area-3 .header-nav .navigation .navbar .navbar-nav .nav-item {
       margin-right: 0; }
       @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -1359,7 +1359,7 @@ PRELOADER
     background: linear-gradient(90deg, #0c5adb 0%, rgba(12, 90, 219, 0.6) 50%, rgba(255, 255, 255, 0) 100%); }
     @media (max-width: 767px) {
       .single-banner .banner-overlay {
-        height: 700px; } }
+        height: 560px; } }
     .single-banner .banner-overlay .banner-content {
       overflow: hidden; }
       .single-banner .banner-overlay .banner-content span {

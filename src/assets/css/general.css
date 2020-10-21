@@ -120,7 +120,7 @@ label{
   color: var(--rouge) !important;
 }
 .single-banner .banner-overlay .banner-content .title{
-  font-size: 4.2em;
+      font-size: calc(22px + (100 - 24) * ((100vw - 300px) / (1920 - 300))) !important;
 }
 .preloader,
 .services-title-area{
