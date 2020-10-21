@@ -7,6 +7,6 @@ ul li{
 }
 
 .page-title-area::before{
-  background-image: url('/assets/images/attestation.jpg') !important;
+  background-image: url('../../../../../assets/images/attestation.jpg') !important;
   background-size: 100% auto;
 }
