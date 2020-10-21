@@ -196,7 +196,7 @@
     <div class="row justify-content-center">
       <div *ngFor="let item of employeurData" class="col-lg-4 col-md-6 col-sm-9 wow slideInUp mb-3"
            data-wow-delay="0s" data-wow-duration=".5s">
-        <div class="single-choose text-center mt-30">
+        <div class="single-choose text-center mt-30" [routerLink]="[item?.url]">
           <div class="icon-box">
             <span></span>
             <i class="fal fa-{{item?.icon}}"></i>
@@ -389,7 +389,7 @@
                 <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
               </div>
               <div class="our-choose-counter wow slideInUp mt-55" data-wow-delay="0s" data-wow-duration="1s">
-                <sub><span class="counter">20 000</span> <sup>+</sup></sub>
+                <sub><span class="counter">20000</span> <sup>+</sup></sub>
                 <span>Salariés</span>
                 <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
               </div>
