@@ -7,3 +7,24 @@ agm-map {
 .page-title-area .page-title-item {
     padding-top: 6em;
 }
+.agence-name{
+    padding: 10px 15px;
+    margin: 10px;
+    border: 1px solid #ccc3;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.agence-name.active{
+  border-left: 3px solid #fa9e37 !important;
+  border: 1px solid #fa9e37;
+  color: #fa9e37;
+}
+.agence-item{
+    padding: 15px;
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+    border-radius: 5px;
+}
+.page-title-area::before{
+  background-image: url('../../../../assets/images/ndamli.jpg') !important;
+  background-size: 100% auto;
+}

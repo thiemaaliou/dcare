@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
        btnUrl: "/employeur"
      },
      {
-       title: "Portail numérique commun IPRES/CSS",
+       title: "Portail numérique commun CSS/IPRES",
        subTitle: "Vos démarches en un seul clic !",
        description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
 
@@ -27,9 +27,9 @@ export class HomeComponent implements OnInit {
        btnUrl: "/employeur"
      },
      {
-       title: "Paiement en ligne <br> IPRES CSS",
+       title: "Paiement en ligne <br> IPRES/CSS",
        subTitle: "Paiement sécurisé et rapide",
-       description: "Elle dispose d'agences régionales, de centres de protection maternelle et infantile, de cliniques et de plannings familiaux. L'Institution de Prévoyance Retraites du Sénégal (IPRES) gère le régime national obligatoire d'assurance vieillesse",
+       description: "La plateforme NDAMLI vous offre la possibilité de payer en ligne de manière sécurisée et très simple",
        img: "assets/images/bannieres-ipres-1.jpg",
      }
    ];

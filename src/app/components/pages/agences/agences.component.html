@@ -8,7 +8,7 @@
         <div class="page-title-item text-center">
           <h2 class="title">Nos agences</h2>
           <span class="text-blue"><img alt="" src="assets/images/marker-blue.png">Agences CSS</span>
-          <span class="mr-4 text-red"><img alt="" src="assets/images/marker-red.png">Agences IPRES</span>
+          <span class="ml-4 text-red"><img alt="" src="assets/images/marker-red.png">Agences IPRES</span>
         </div> <!-- page title -->
       </div>
     </div> <!-- row -->
@@ -26,9 +26,111 @@
 </div> <!-- row -->
 
 <!--====== CASE DETAILS PART START ======-->
-<div class="case-details-area pt-0 pb-115">
+<div class="case-details-area pt-0 pb-115" [ngClass]="{'pl-5 pr-5': router.url.includes('agences')}">
   <div class="container-full">
     <div class="row">
+      <div class="col-12">
+        <div class="row no-margin">
+          <a class="agence-name" [class.active]="activeSection == 'css'" (click)="activeSection = 'css'">Agences CSS</a>
+          <a class="agence-name" [class.active]="activeSection == 'ipres'"  (click)="activeSection = 'ipres'">Agences IPRES</a>
+        </div>
+      </div>
+      <div class="col-12 pt-3">
+        <div class="row no-margin agences-content" *ngIf="activeSection == 'ipres'">
+          <div class="pb-4" [ngClass]="{'col-lg-3 col-md-3 col-xs-6 col-sm-6': router.url.includes('agences'), 'col-lg-6 col-md-6 col-xs-12 col-sm-12': router.url.includes('apropos')}" *ngFor="let ag of agences?.IPRES">
+            <div class="agence-item">
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Agence:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.title}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Adresse:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.address}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Téléphone:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.phone}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Fax:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.fax}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Code postal:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.postalCode}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row no-margin agences-content" *ngIf="activeSection == 'css'">
+          <div class=" pb-4" [ngClass]="{'col-lg-3 col-md-3 col-xs-6 col-sm-6': router.url.includes('agences'), 'col-lg-6 col-md-6 col-xs-12 col-sm-12': router.url.includes('apropos')}" *ngFor="let ag of agences?.CSS">
+            <div class="agence-item">
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Agence:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.title}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Adresse:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.address}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Téléphone:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.phone}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Fax:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.fax}}
+                </div>
+              </div>
+              <div class="row line-item-marker">
+                <div class="col-lg-4">
+                  Code postal:
+                </div>
+                <div class="col-lg-8 text-right">
+                  {{ag?.postalCode}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
       <div class="col-12">
         <agm-map [latitude]="lat" [longitude]="lng" [restriction]="'SN'" [zoom]="8">
           <agm-marker *ngFor="let ag of agences?.IPRES" [iconUrl]="'assets/images/marker-red.png'" [latitude]="ag?.lat"

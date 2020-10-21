@@ -10,6 +10,7 @@ export class AgencesComponent implements OnInit {
   lat = 14.499454;
   lng = -14.4455614;
   agences: any = [];
+  activeSection: string = 'css';
   constructor(private authService: AuthService, public router: Router) { }
 
   ngOnInit(): void {
