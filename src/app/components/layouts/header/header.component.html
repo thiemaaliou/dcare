@@ -1,32 +1,9 @@
 <!--====== HEADER PART START ======-->
 <header class="header-area header-area-2 header-area-4">
-    <!-- <div class="header-top pl-30 pr-30 white-bg">
-        <div class="row align-items-center">
-            <div class="col-md-6 col-sm-7">
-                <div class="header-left-side text-center text-sm-left">
-                    <ul>
-                        <li><a href="#"><i class="fal fa-envelope"></i> info@webmail.com</a></li>
-                        <li><a href="#"><i class="fal fa-phone"></i> 786 875 864 75 7</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-6 col-sm-5">
-                <div class="header-right-social text-center text-sm-right">
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div> -->
     <div class="header-nav">
         <div class="navigation">
             <nav class="navbar navbar-expand-lg navbar-light ">
-                <a class="navbar-brand" href="{{adminAppUrl}}"><img src="assets/images/logo.png" alt=""></a> <!-- logo -->
+                <a class="navbar-brand" href="/"><img src="assets/images/logo.png" alt=""></a> <!-- logo -->
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="toggler-icon"></span>
                     <span class="toggler-icon"></span>
@@ -34,64 +11,32 @@
                 </button> <!-- navbar toggler -->
                 <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <!-- <li class="nav-item active"> -->
-                            <!-- <a  routerLink='/' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Accueil</a> -->
-                            <!-- <ul class="sub-menu">
-                                <li><a routerLink='/' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home 1</a></li>
-                                <li><a routerLink='/home-2' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home 2</a></li>
-                                <li><a routerLink='/home-3' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home 3</a></li>
-                                <li><a routerLink='/home-4' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Home 4</a></li>
-                            </ul> -->
-                            <!-- sub menu -->
-                        <!-- </li> -->
+                      <li class="nav-item">
+                          <a class="nav-link" [class.active]="router.url == '/apropos'" [routerLink]="['/apropos']">Qui sommes-nous ?</a>
+                      </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/employeur-details']">Espace employeur</a>
+                            <a class="nav-link" [class.active]="router.url.includes('employeur')" href="#">Employeur <i class="fas fa-chevron-down"></i></a>
+                            <ul class="sub-menu">
+                                <li><a routerLink='/employeur/creation-compte' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Création de compte</a></li>
+                                <li><a routerLink='/employeur/formalite-immatriculation' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Formalités d’immatriculation</a></li>
+                                <li><a routerLink='/employeur/declaration-nominative' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Déclaration nominative des salaires en ligne</a></li>
+                                <li><a routerLink='/employeur/paiement-cotisations' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Paiement de cotisations en ligne </a></li>
+                                <!-- <li><a routerLink='/employeur/consultation-compte' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Consultation de compte</a></li> -->
+                                <li><a routerLink='/employeur/demande-attestation' routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Demande d’attestation en ligne </a></li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/employe-details']">Espace Salarié</a>
-                            <!-- <ul class="sub-menu">
-                                <li><a routerLink='/services' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Services</a></li>
-                                <li><a routerLink='/service-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Services Details</a></li>
-                            </ul>  -->
+                            <a class="nav-link" [class.active]="router.url.includes('employe-details')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" [routerLink]="['/employe-details']">Salarié</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" [routerLink]="['/allocataire-details']">Espace allocataire </a>
-                            <!-- <ul class="sub-menu">
-                                <li><a routerLink='/case-study' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">case study</a></li>
-                                <li><a routerLink='/case-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Case Details</a></li>
-                                <li><a routerLink='/coming-soon' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">coming soon</a></li>
-                                <li><a routerLink='/faqs' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">faq</a></li>
-                                <li><a routerLink='/pricing' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">pricing</a></li>
-                                <li><a routerLink='/shop' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">shop</a></li>
-                                <li><a routerLink='/shop-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">shop Details</a></li>
-                                <li><a routerLink='/team' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">team</a></li>
-                                <li><a routerLink='/team-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">team details</a></li>
-                            </ul>  -->
+                            <a class="nav-link" [class.active]="router.url.includes('allocataire-details')" [routerLink]="['/allocataire-details']">Allocataire </a>
                         </li>
-                        <!-- <li class="nav-item"> -->
-                            <!-- <a class="nav-link" href="#">Inscription</a> -->
-                            <!-- <ul class="sub-menu">
-                                <li><a routerLink='/blog' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Standard</a></li>
-                                <li><a routerLink='/blog-grid' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Grid</a></li>
-                                <li><a routerLink='/blog-detail' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Blog Details</a></li>
-                            </ul> -->
-                        <!-- </li> -->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" routerLink='/contact-us' routerLinkActive="active"[routerLinkActiveOptions]="{exact: true}">Connexion</a>
-                        </li> -->
                     </ul>
-                </div> <!-- navbar collapse -->
-                <!-- <div class="bar-area d-none d-xl-block">
-                    <ul>
-                        <li><a href="#"><i class="fal fa-shopping-cart"></i></a></li>
-                        <li><a href="#"><i class="fal fa-search"></i></a></li>
-                        <li><a href="#"><i class="fal fa-bars"></i></a></li>
-                    </ul>
-                </div> -->
+                </div>
                 <div class="navbar-btn mr-100 pr-3">
-                    <a class="register-btn" routerLink='/register'>Inscription</a>
                 </div>
                 <div class="navbar-btn mr-100">
+                    <a class="register-btn mr-3" routerLink='/register' [class.active]="router.url.includes('register')">Inscription</a>
                     <a class="main-btn" href="{{adminAppUrl}}">Connexion <i class="fal fa-long-arrow-right"></i></a>
                 </div>
             </nav>

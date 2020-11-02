@@ -1,17 +1,34 @@
 .register-btn{
-  border: 1px solid #9999;
+  border: 1px solid #cec7c7e6;
   font-weight: 700;
+  background: #ffffffbd;
 }
 .navigation:not(.sticky){
   top: 0 !important;
   background: transparent !important;
 
 }
-.navigation:not(.sticky) .navbar .navbar-nav a{
-  line-height: 90px !important;
+.navigation:not(.sticky) .navbar .navbar-nav a.nav-link:not(.active){
   color: #fff !important;
+
+}
+.navigation:not(.sticky) .navbar .navbar-nav a.nav-link{
+  line-height: 90px !important;
   text-transform: uppercase;
 }
-.header-nav .navigation:not(.sticky) .navbar .navbar-btn a{
+.header-nav .navigation:not(.sticky) .navbar .navbar-btn a.nav-link{
     color: #fff !important;
+}
+.sub-menu > li a {
+  line-height: 20px !important;
+  padding: 10px 15px !important;
+  font-size: 12px !important;
+  border-bottom: 1px solid #e1e1e1;
+}
+.sub-menu > li:hover a{
+      background-color: #cf3b3b !important;
+}
+
+.nav-link.active{
+  color: #f6931e !important;
 }

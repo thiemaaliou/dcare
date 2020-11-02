@@ -4,13 +4,14 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://192.168.1.45:8080/api/',
+  apiUrl: 'https://online.secusociale.sn/api/',
   appUrl: 'localhost:4200/',
   adminAppUrl:'https://online.secusociale.sn/cssipres/',
   appName: 'IPRES-CSS',
   appHost: 'www.ipres-css.sn',
   siteCapchatKey:  '6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1',
-  siteSecretKey: '6Ld50NgZAAAAACrVoyYSwXBud8Wit5PsCqwcSho6'
+  siteSecretKey: '6Ld50NgZAAAAACrVoyYSwXBud8Wit5PsCqwcSho6',
+  footerText: 'Copyright © CSS-IPRES'
 };
 
 /*

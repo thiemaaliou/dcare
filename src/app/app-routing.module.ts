@@ -2,23 +2,24 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/pages/home/home.component';
 import { BlogdetailsComponent } from './components/pages/blogdetails/blogdetails.component';
-import { BloggridComponent } from './components/pages/bloggrid/bloggrid.component';
 import { AgencesComponent } from './components/pages/agences/agences.component';
-import { ContactComponent } from './components/pages/contact/contact.component';
-import { ServicesComponent } from './components/pages/services/services.component';
-import { ServicedetailComponent } from './components/pages/servicedetail/servicedetail.component';
 import { RegisterComponent } from './components/pages/register/register.component';
 import { ChangePasswordComponent } from './components/pages/change-password/change-password.component';
 import { EmployeeComponent } from './components/pages/employee/employee.component';
 import { AllocataireComponent } from './components/pages/allocataire/allocataire.component';
+import { AProposComponent } from './components/pages/apropos/apropos.component';
 
 
 const routes: Routes = [
   {
-    path:'',component:HomeComponent
+    path:'',component: HomeComponent
   },
   {
-    path:'employeur-details',component: BlogdetailsComponent
+    path:'apropos',component: AProposComponent
+  },
+  {
+    path:'employeur',
+    loadChildren: () => import('./components/pages/employeur/employeur.module').then( m => m.EmployeurModule)
   },
   {
     path:'employe-details',component: EmployeeComponent
@@ -27,19 +28,7 @@ const routes: Routes = [
     path:'allocataire-details',component: AllocataireComponent
   },
   {
-    path:'blog-grid',component:BloggridComponent
-  },
-  {
     path:'agences',component: AgencesComponent
-  },
-  {
-    path:'contact-us',component:ContactComponent
-  },
-  {
-    path:'services',component:ServicesComponent
-  },
-  {
-    path:'service-detail',component:ServicedetailComponent
   },
   {
     path:'register',component: RegisterComponent

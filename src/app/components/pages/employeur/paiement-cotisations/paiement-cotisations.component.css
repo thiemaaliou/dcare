@@ -1,0 +1,7 @@
+p b{
+  color: orange;
+}
+.page-title-area::before{
+  background-image: url('../../../../../assets/images/paiement.jpg') !important;
+  background-size: 100% auto;
+}

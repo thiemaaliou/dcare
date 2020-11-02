@@ -1,4 +1,4 @@
-import { Component, OnInit, Directive, HostListener, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import {NgForm} from '@angular/forms';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';

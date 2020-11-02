@@ -8,28 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
    slideData = [
      {
-       title: "IPRES Sénégal<br> Votre solution",
-       subTitle: "L'Institution de Prévoyance Retraites du Sénégal",
-       description: "L'institution de Prévoyance Retraite du Sénégal (I.P.RE.S.) est un organisme de droit privé placé sous la tutelle technique et financière de l'Etat.",
+       title: "Bienvenue sur le portail<br> NDAMLI CSS/IPRES",
+       subTitle: "",
+       description: "Vos démarches en un seul clic !",
+       //description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
        img: "assets/images/bannieres-ipres-2.jpg",
-       btnText: "En savoir plus",
-       btnUrl: "/services"
+       //btnText: "En savoir plus",
+       btnUrl: "/employeur"
      },
      {
-       title: "Caisse de sécurité <br>sociale",
-       subTitle: "Caisse de sécurité sociale",
-       description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
+       title: "Portail numérique commun CSS/IPRES",
+       subTitle: "Vos démarches en un seul clic !",
+       description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
+
+       //description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
        img: "assets/images/bannieres-ipres-3.jpg",
-       btnText: "En savoir plus",
-       btnUrl: "/services"
+      // btnText: "En savoir plus",
+       btnUrl: "/employeur"
      },
      {
-       title: "Paiement en ligne <br> IPRES CSS",
+       title: "Paiement en ligne <br> IPRES/CSS",
        subTitle: "Paiement sécurisé et rapide",
-       description: "Elle dispose d'agences régionales, de centres de protection maternelle et infantile, de cliniques et de plannings familiaux. L'Institution de Prévoyance Retraites du Sénégal (IPRES) gère le régime national obligatoire d'assurance vieillesse",
+       description: "La plateforme NDAMLI vous offre la possibilité de payer en ligne de manière sécurisée et très simple",
        img: "assets/images/bannieres-ipres-1.jpg",
-       btnText: "En savoir plus",
-       btnUrl: "/services"
      }
    ];
    employeurData = [
@@ -37,37 +38,43 @@ export class HomeComponent implements OnInit {
        img: "assets/images/case-studies-1.png",
        title: "Création de compte",
        description: "Demande de création d'un compte d'accès à votre espace privé employeur. La création de compte est gratuit et ne prends pas plus 2 minutes. Vous devez fournir juste les informations nécessaires pour procéder à la création du compte.",
-       icon: "folder"
+       icon: "folder",
+       url: '/employeur/creation-compte'
      },
      {
        img: "assets/images/case-studies-2.png",
        title: "Consultation de compte",
        description: "Les cotisations sont assises sur la rémunération brute des intéressés jusqu’à concurrence d’un plafond fixé chaque année par le Conseil d’Administration. L’assiette de cotisation représente toutes sommes versées ou dues au travailleur ou à l’occasion d’un travail",
-       icon: "eye"
+       icon: "eye",
+       url: '/employeur/creation-compte'
      },
      {
        img: "assets/images/case-studies-3.png",
        title: "Demande attestation en ligne",
        description: "Demandez une attestion ",
-       icon: "file-pdf"
+       icon: "file-pdf",
+       url: '/employeur/demande-attestation'
      },
      {
        img: "assets/images/case-studies-4.png",
        title: "Paiement cotisations en ligne",
        description: "Payez vos cotisations",
-       icon: "credit-card"
+       icon: "credit-card",
+       url: '/employeur/paiement-cotisations'
      },
      {
        img: "assets/images/case-studies-5.png",
        title: "Formalités d’Immatriculation",
        description: "Demandez une Immatriculation",
-       icon: "window-restore"
+       icon: "window-restore",
+       url: '/employeur/formalite-immatriculation'
      },
      {
        img: "assets/images/case-studies-6.png",
        title: "Déclaration nominative des rémunérations en ligne",
        description: "Déclaration des rémunérations",
-       icon: "book"
+       icon: "book",
+       url: '/employeur/declaration-nominative'
      },
    ];
 

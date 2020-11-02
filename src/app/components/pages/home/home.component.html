@@ -1,406 +1,467 @@
 <app-header></app-header>
 
 <div class="banner-active">
-    <div class="single-banner bg_cover" *ngFor="let slide of slideData" [ngStyle]="{'background-image': 'url('+slide.img+')', 'background-repeat': 'no-repeat'}">
-        <div class="banner-overlay">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="banner-content">
-                            <span data-animation="fadeInLeft" data-delay="0.5s">{{slide?.subTitle}}</span>
-                            <h1 data-animation="fadeInLeft" data-delay="0.9s" class="title" [innerHTML]="slide.title"></h1>
-                            <p data-animation="fadeInLeft" data-delay="1.3s">{{slide?.description}} </p>
-                            <a data-animation="fadeInUp" data-delay="1.6s" class="main-btn" [routerLink]='slide?.btnUrl'>{{slide?.btnText}} <i class="fal fa-long-arrow-right"></i></a>
-                        </div> <!-- banner content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div>
+  <div *ngFor="let slide of slideData"
+       [ngStyle]="{'background-image': 'url('+slide.img+')', 'background-repeat': 'no-repeat'}"
+       class="single-banner bg_cover">
+    <div class="banner-overlay">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="banner-content">
+              <span data-animation="fadeInLeft" data-delay="0.5s">{{slide?.subTitle}}</span>
+              <h1 [innerHTML]="slide.title" class="title" data-animation="fadeInLeft" data-delay="0.9s"></h1>
+              <p data-animation="fadeInLeft" data-delay="1.3s">{{slide?.description}} </p>
+
+              <a *ngIf="slide.btnText" [routerLink]='slide?.btnUrl' class="main-btn" data-animation="fadeInUp"
+                 data-delay="1.6s">{{slide?.btnText}} <i class="fal fa-long-arrow-right"></i></a>
+
+            </div> <!-- banner content -->
+          </div>
+        </div> <!-- row -->
+      </div> <!-- container -->
     </div>
+  </div>
 </div>
 
-<div class="who-we-are-area pt-110 pb-120">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0s">
-                <div class="section-title">
-                    <span>Notre Mission</span>
-                    <h2 class="title">Pour vous servir au mieux</h2>
-                </div> <!-- section title -->
-            </div>
-            <div class="col-lg-6 offset-lg-1 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0s">
-                <div class="section-title">
-                    <p>Avec comme mission principale la gestion du régime de sécurité sociale institué par l’Etat du Sénégal en faveur des travailleurs salariés et assimilés et des retraités, nous avons respectivement pour rôle de recouvrer les cotisations des personnes assujetties et de les redistribuer sous forme de prestations techniques (pensions, allocations familiales, assurance vieillesse...) et d’assurer le service d’une pension ou allocation de retraite aux anciens salariés. </p>
-                </div> <!-- section title -->
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
-                <div class="what-we-do-item text-center mt-30">
-                    <i class="fal fa-laptop-code"></i>
-                    <h5 class="title">Travaillez en sécurité</h5>
-                    <p>Accidents du travail et les maladies professionnelles</p>
-                    <a><i class="fal fa-long-arrow-right"></i></a>
-                </div> <!-- what we do item -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                <div class="what-we-do-item text-center mt-30">
-                    <i class="fal fa-fingerprint"></i>
-                    <h5 class="title">Prestations familiales</h5>
-                    <p>Donne une meilleure condition de vie à votre famille</p>
-                    <a ><i class="fal fa-long-arrow-right"></i></a>
-                </div> <!-- what we do item -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                <div class="what-we-do-item text-center mt-30">
-                    <i class="fal fa-chalkboard"></i>
-                    <h5 class="title">Vieillesse et Retraites</h5>
-                    <p>On s'occupe de tout pour votre bonne retraite</p>
-                    <a ><i class="fal fa-long-arrow-right"></i></a>
-                </div> <!-- what we do item -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-duration="2s" data-wow-delay="0s">
-                <div class="what-we-do-item text-center mt-30">
-                    <i class="fal fa-database"></i>
-                    <h5 class="title">Prenez votre retraite</h5>
-                    <p>En toute quietude en vous ayant souscrire a IPRES</p>
-                    <a ><i class="fal fa-long-arrow-right"></i></a>
-                </div> <!-- what we do item -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="what-we-are-shape-1">
-        <img src="assets/images/what-we-are-shape-1.png" alt="shape">
+<div class="who-we-are-area pt-10 pb-120">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 pb-5 wow fadeInRight text-justify" data-wow-delay="0s" data-wow-duration="1.5s">
+        <div class="section-title">
+          <p>NDAMLI est le guichet unique et votre interlocuteur privilégiépour les démarches administratives relatives aux activités dela   Caisse   de   Sécurité   Sociale   (CSS)   et   de   l’Institution   dePrévoyance retraite du Sénégal (IPRES). Il a été conçu et réalisé pour vous assurer une meilleure qualitéde service par la simplicité et la sécurité des procédures.Si vous êtes Employeur, NDAMLI vous offre la possibilité de fairevos   déclarations   et   vos   paiements   en   ligne   ainsi   que  toutes   vosdemandes de services (...). Si   vous   êtes   salarié   ou   bénéficiaire,   NDAMLI   vous   offre   desespaces pour toutes vos vérifications et vos demandes de services(...)</p>
+        </div> <!-- section title -->
+      </div>
+
+      <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0s" data-wow-duration="1s">
+        <div class="section-title">
+          <span>Notre Mission</span>
+          <h2 class="title">Pour vous servir au mieux</h2>
+        </div> <!-- section title -->
+      </div>
+      <div class="col-lg-6 offset-lg-1 wow fadeInRight" data-wow-delay="0s" data-wow-duration="1.5s">
+        <div class="section-title">
+          <p>Avec comme mission principale la gestion du régime de sécurité sociale institué par l’Etat du Sénégal en
+            faveur des travailleurs salariés et assimilés et des retraités, nous avons respectivement pour rôle de
+            recouvrer les cotisations des personnes assujetties et de les redistribuer sous forme de prestations
+            techniques (pensions, allocations familiales, assurance vieillesse...) et d’assurer le service d’une pension
+            ou allocation de retraite aux anciens salariés. </p>
+        </div> <!-- section title -->
+      </div>
     </div>
-    <div class="what-we-are-shape-2">
-        <img src="assets/images/what-we-are-shape-2.png" alt="shape">
-    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-delay="0s" data-wow-duration=".5s">
+        <div class="what-we-do-item text-center mt-30">
+          <i class="fal fa-laptop-code"></i>
+          <h5 class="title">Travaillez en sécurité</h5>
+          <p>Accidents du travail et les maladies professionnelles</p>
+          <a><i class="fal fa-long-arrow-right"></i></a>
+        </div> <!-- what we do item -->
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-delay="0s" data-wow-duration="1s">
+        <div class="what-we-do-item text-center mt-30">
+          <i class="fal fa-fingerprint"></i>
+          <h5 class="title">Prestations familiales</h5>
+          <p>Donne une meilleure condition de vie à votre famille</p>
+          <a><i class="fal fa-long-arrow-right"></i></a>
+        </div> <!-- what we do item -->
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-delay="0s" data-wow-duration="1.5s">
+        <div class="what-we-do-item text-center mt-30">
+          <i class="fal fa-chalkboard"></i>
+          <h5 class="title">Vieillesse et Retraites</h5>
+          <p>On s'occupe de tout pour votre bonne retraite</p>
+          <a><i class="fal fa-long-arrow-right"></i></a>
+        </div> <!-- what we do item -->
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 wow slideInUp" data-wow-delay="0s" data-wow-duration="2s">
+        <div class="what-we-do-item text-center mt-30">
+          <i class="fal fa-database"></i>
+          <h5 class="title">Prenez votre retraite</h5>
+          <p>En toute quietude en vous ayant souscrire a IPRES</p>
+          <a><i class="fal fa-long-arrow-right"></i></a>
+        </div> <!-- what we do item -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+  <div class="what-we-are-shape-1">
+    <img alt="shape" src="assets/images/what-we-are-shape-1.png">
+  </div>
+  <div class="what-we-are-shape-2">
+    <img alt="shape" src="assets/images/what-we-are-shape-2.png">
+  </div>
 </div>
 
 <div class="solution-area bg_cover" style="background-image: url(assets/images/solution-bg.jpg);">
-    <div class="solution-overlay pt-120">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="solution-box">
-                        <div class="solution-content">
-                            <h3 class="title">Découvrez les institutions</h3>
-                            <p>Augmenter l’efficacité et l’efficience du service rendu, c’est faire en sorte que les institutions de sécurité sociale se saisissent des opportunités de se rapprocher de vous pour mieux vous servir. Ce portail, ainsi, mis à disposition, vous offre la possibilité de procéder à distance à certaines opérations, jusque-là effectuées qu’en agence et contribuera largement à optimiser le parcours usager.</p>
-                            <div class="solution-play text-right mr-30 d-block d-lg-none">
-                                <a class="video-popup"><i class="fas fa-play"></i></a>
-                            </div> <!-- solution play -->
-                        </div>
-                    </div> <!-- solution box -->
-                </div>
-                <div class="col-lg-4">
-                    <div class="solution-play text-right mr-30 d-none d-lg-block">
-                        <a class="video-popup" href="https://www.youtube.com/k8d5_3hhgJk" ><i class="fas fa-play"></i></a>
-                    </div> <!-- solution play -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
+  <div class="solution-overlay pt-120">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="solution-box">
+            <div class="solution-content">
+              <h3 class="title">Mot du président</h3>
+              <p>Chers collaborateurs de l’institution,
+                  Notre système de retraite par répartition est fondé sur le principe de solidarité entre les générations, et vous salariés de l’Institution, êtes les garants de sa pérennité.
+                  Retraités, employeurs et salariés actifs, l’IPRES appartient à tous.
+                  Notre mission de service public implique un comportement exemplaire en matière de gouvernance et de  qualité des prestations offertes à nos concitoyens
+                  La communication représente pour notre Institution, une priorité stratégique pour les années à venir.</p>
+              <span class="author-text">M. Mamadou Racine SY – PCA IPRES</span>
+              <div class="solution-play text-right mr-30 d-block d-lg-none">
+                <a class="video-popup"><i class="fas fa-play"></i></a>
+              </div> <!-- solution play -->
+            </div>
+          </div> <!-- solution box -->
+        </div>
+        <div class="col-lg-4">
+          <div class="solution-play text-right mr-30 d-none d-lg-block">
+            <a class="video-popup" href="https://www.youtube.com/watch?v=phzz9W4dD4U"><i class="fas fa-play"></i></a>
+          </div> <!-- solution play -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div>
 </div>
 
 <div class="services-title-area">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-12">
-                <div class="services-title-item text-center">
-                    <div class="ring-shape"></div>
-                    <span>Vos droits et devoirs</span>
-                    <h3 class="title">Des informations pour mieux vous aider à comprendre votre statut</h3>
-                </div> <!-- services title item -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <div class="services-title-item text-center">
+          <div class="ring-shape"></div>
+          <span>Vos droits et devoirs</span>
+          <h3 class="title">Des informations pour mieux vous aider à comprendre votre statut</h3>
+        </div> <!-- services title item -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
 </div>
 
-<div class="latest-services-area" >
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration=".5s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.1.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">ESPACE EMPLOYEUR</h4>
-                        <p>On entend par employeur "toute personne physique ou morale, publique ou privée ayant à son service, moyennant rémunération, une ou plusieurs personnes.</p>
-                        <a [routerLink]="['/employeur-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.2.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">ESPACE SALARIÉ</h4>
-                        <p>Le salarié est une personne qui s'engage à exécuter un travail, à temps plein ou à temps partiel, pour le compte d'un employeur, en contrepartie d'un salaire ou d'un traitement</p>
-                        <a [routerLink]="['/employe-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                <div class="single-services mt-30 mb-55">
-                    <div class="services-thumb">
-                        <img src="assets/images/services-4.3.jpg" alt="">
-                    </div>
-                    <div class="services-content">
-                        <h4 class="title">ESPACE ALLOCATAIRE</h4>
-                        <p>Les allocataires des Caisses d'Allocations Familiales sont les personnes qui perçoivent au moins une allocation en regard de leur situation familiale et/ou monétaire.</p>
-                        <a [routerLink]="['/allocataire-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single services -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
+<div class="latest-services-area">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-delay="0s" data-wow-duration=".5s">
+        <div class="single-services mt-30 mb-55">
+          <div class="services-thumb">
+            <img alt="" src="assets/images/services-4.1.jpg">
+          </div>
+          <div class="services-content">
+            <h4 class="title">ESPACE EMPLOYEUR</h4>
+            <p>On entend par employeur "toute personne physique ou morale, publique ou privée ayant à son service,
+              moyennant rémunération, une ou plusieurs personnes.</p>
+            <a [routerLink]="['/employeur-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+          </div>
+        </div> <!-- single services -->
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-delay="0s" data-wow-duration="1s">
+        <div class="single-services mt-30 mb-55">
+          <div class="services-thumb">
+            <img alt="" src="assets/images/services-4.2.jpg">
+          </div>
+          <div class="services-content">
+            <h4 class="title">ESPACE SALARIÉ</h4>
+            <p>Le salarié est une personne qui s'engage à exécuter un travail, à temps plein ou à temps partiel, pour le
+              compte d'un employeur, en contrepartie d'un salaire ou d'un traitement</p>
+            <a [routerLink]="['/employe-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+          </div>
+        </div> <!-- single services -->
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-9 wow fadeInUp" data-wow-delay="0s" data-wow-duration="1.5s">
+        <div class="single-services mt-30 mb-55">
+          <div class="services-thumb">
+            <img alt="" src="assets/images/services-4.3.jpg">
+          </div>
+          <div class="services-content">
+            <h4 class="title">ESPACE ALLOCATAIRE</h4>
+            <p>Les allocataires des Caisses d'Allocations Familiales sont les personnes qui perçoivent au moins une
+              allocation en regard de leur situation familiale et/ou monétaire.</p>
+            <a [routerLink]="['/allocataire-details']">ACCEDER <i class="fal fa-long-arrow-right"></i></a>
+          </div>
+        </div> <!-- single services -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
 </div>
 
 <div class="why-choose-area" id="employeur">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="section-title text-center">
-                    <span [routerLink]="['/employeur-details']"> Voir plus <i class="fal fa-long-arrow-right"></i></span>
-                    <h2 class="title">En tant qu'employeur</h2>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="section-title text-center">
+          <span [routerLink]="['/employeur']"> Voir plus <i class="fal fa-long-arrow-right"></i></span>
+          <h2 class="title">En tant qu'employeur</h2>
 
-                </div>
-            </div>
         </div>
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6 col-sm-9 wow slideInUp mb-3" *ngFor="let item of employeurData" data-wow-duration=".5s" data-wow-delay="0s">
-                <div class="single-choose text-center mt-30">
-                    <div class="icon-box">
-                        <span></span>
-                        <i class="fal fa-{{item?.icon}}"></i>
-                    </div>
-                    <h4 class="title pt-3">{{item?.title}}</h4>
-                    <!-- <p>{{item?.description}}</p> -->
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div *ngFor="let item of employeurData" class="col-lg-4 col-md-6 col-sm-9 wow slideInUp mb-3"
+           data-wow-delay="0s" data-wow-duration=".5s">
+        <div class="single-choose text-center mt-30" [routerLink]="[item?.url]">
+          <div class="icon-box">
+            <span></span>
+            <i class="fal fa-{{item?.icon}}"></i>
+          </div>
+          <h4 class="title pt-3">{{item?.title}}</h4>
+          <!-- <p>{{item?.description}}</p> -->
         </div>
+      </div>
     </div>
-    <div class="choose-dot">
-        <img src="assets/images/choose-dot.png" alt="">
-    </div>
-    <div class="choose-shape">
-        <img src="assets/images/choose-shape.png" alt="">
-    </div>
+  </div>
+  <div class="choose-dot">
+    <img alt="" src="assets/images/choose-dot.png">
+  </div>
+  <div class="choose-shape">
+    <img alt="" src="assets/images/choose-shape.png">
+  </div>
+</div>
+
+
+<div class="solution-area bg_cover " style="background-image: url(assets/images/mademba-sock.jpg);">
+  <div class="solution-overlay pb-5 pt-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="solution-box">
+            <div class="solution-content">
+              <h3 class="title">Mot du président</h3>
+              <p>Il était important pour nous de donner aux populations une raison d’être fier de leurs institutions. Et c’est ce que L’IPRES et la Caisse de Sécurité Sociale ont fait avec ce coup de génie qui a permis d’harmoniser et de moderniser le système d’information. Ce nouveau site réalisé pour tous les usagers va vous faciliter les démarches administratives et vous permettre de mieux exercer vos droits et obligations.
+
+                Partenaires du mnde économique et social, nous souhaitons développer avec vous des relations concrètes en vous proposant une information simple, pratique et utile.
+                Nous espérons répondre à vos préoccupations majeures en matière de démarches auprès de la Caisse de sécurité Sociale.
+                N’hésitez pas à nous contacter pour toutes précisions complémentaires ou toutes suggestions permettant d’améliorer la qualité du service que nous vous rendons. Nos services centraux et agences sont à votre disposition.</p>
+              <span class="author-text">M. Mademba SOCK – PCA Caisse de Sécurité Sociale</span>
+              <div class="solution-play text-right mr-30 d-block d-lg-none">
+                <a class="video-popup"><i class="fas fa-play"></i></a>
+              </div> <!-- solution play -->
+            </div>
+          </div> <!-- solution box -->
+        </div>
+        <div class="col-lg-4">
+          <div class="solution-play text-right mr-30 d-none d-lg-block">
+            <a class="video-popup" href="https://www.youtube.com/watch?v=FIGW4CTp-sY"><i class="fas fa-play"></i></a>
+          </div> <!-- solution play -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div>
 </div>
 
 <div class="case-studies-area" id="allocataire">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title">
-                  <h2 class="title">Allocataire </h2>
-                  <span [routerLink]="['/allocataire-details']">Voir tout <i class="fal fa-long-arrow-right"></i> </span>
-                </div> <!-- section title -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="section-title">
+          <h2 class="title">Allocataire </h2>
+          <span [routerLink]="['/allocataire-details']">Voir tout <i class="fal fa-long-arrow-right"></i> </span>
+        </div> <!-- section title -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+  <div class="container-fluid pl-70 pr-70">
+    <div class="row no-gutters case-studies-active">
+      <div *ngFor="let item of allocataireData" class="col-lg-3">
+        <div class="single-case-studies mt-30">
+          <img alt="case-studies" src="{{item?.img}}">
+          <div class="case-overlay">
+            <div class="item">
+              <!-- <span>{{item?.description}}</span> -->
+              <h5 class="title">{{item?.title}}</h5>
             </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="container-fluid pl-70 pr-70">
-        <div class="row no-gutters case-studies-active">
-            <div class="col-lg-3" *ngFor="let item of allocataireData">
-                <div class="single-case-studies mt-30">
-                    <img src="{{item?.img}}" alt="case-studies">
-                    <div class="case-overlay">
-                        <div class="item">
-                            <!-- <span>{{item?.description}}</span> -->
-                            <h5 class="title">{{item?.title}}</h5>
-                        </div>
-                        <a ><i class="fal fa-long-arrow-right"></i></a>
-                    </div>
-                </div> <!-- single case studies -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- containe fluid -->
+            <a><i class="fal fa-long-arrow-right"></i></a>
+          </div>
+        </div> <!-- single case studies -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- containe fluid -->
 </div>
 
 <div class="case-studies-area who-we-are-area" id="employe">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5">
-                <div class="section-title">
-                    <span [routerLink]="['/employe-details']">Voir plus <i class="fal fa-long-arrow-right"></i></span>
-                    <h2 class="title">EMPLOYE </h2>
-                </div> <!-- section title -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="container-fluid">
-        <div class="row no-gutters case-studies-active">
-              <div class="col-lg-3 col-md-3 col-sm-6 slideInUp pl-4 pr-4 pb-3 pb-2" *ngFor="let item of employeData" data-wow-duration="2s" data-wow-delay="0s">
-                  <div class="what-we-do-item text-center wow  mt-30">
-                      <i class="fal fa-{{item?.icon}}"></i>
-                      <h5 class="title text-capitalize">{{item?.title}}</h5>
-                      <p >{{item?.description | slice:0:80}}</p>
-                      <a ><i class="fal fa-long-arrow-right"></i></a>
-                  </div> <!-- what we do item -->
-              </div>
-        </div> <!-- row -->
-    </div> <!-- containe fluid -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5">
+        <div class="section-title">
+          <span [routerLink]="['/employe-details']">Voir plus <i class="fal fa-long-arrow-right"></i></span>
+          <h2 class="title">SALARIÉ </h2>
+        </div> <!-- section title -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+  <div class="container-fluid">
+    <div class="row no-gutters case-studies-active">
+      <div *ngFor="let item of employeData" class="col-lg-3 col-md-3 col-sm-6 slideInUp pl-4 pr-4 pb-3 pb-2"
+           data-wow-delay="0s" data-wow-duration="2s">
+        <div class="what-we-do-item text-center wow  mt-30">
+          <i class="fal fa-{{item?.icon}}"></i>
+          <h5 class="title text-capitalize">{{item?.title}}</h5>
+          <p>{{item?.description | slice:0:80}}</p>
+          <a><i class="fal fa-long-arrow-right"></i></a>
+        </div> <!-- what we do item -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- containe fluid -->
 </div>
 
-<div class="contact-us-area bg_cover" style="background-image: url(assets/images/contact-bg.jpg)">
-    <div class="contact-overlay">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-6">
-                    <div class="section-title text-center">
-                        <span>Contactez-nous</span>
-                        <h2 class="title">Nous joindre en remplissant le formulaire</h2>
-                    </div> <!-- sevtion title -->
+<div class="contact-us-area bg_cover" style="background-image: url(assets/images/contact-man.jpg)">
+  <div class="contact-overlay">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <div class="section-title text-center">
+            <span>Contactez-nous</span>
+            <h2 class="title">Nous joindre en remplissant le formulaire</h2>
+          </div> <!-- sevtion title -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-details d-flex">
+            <div class="contact-thumb wow slideInLeft" data-wow-delay="0s" data-wow-duration=".5s">
+              <p class="text-justify"></p>
+              <img alt="" src="assets/images/contact-man.png">
+
+            </div>
+            <div class="contact-form-area">
+              <form action="#">
+                <div class="input-title">
+                  <h3 class="title">Remplissez les champs</h3>
+                </div> <!-- input title -->
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input placeholder="Prénom & nom" type="text">
+                      <i class="fal fa-user"></i>
+                    </div> <!-- input box -->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input placeholder="Email" type="email">
+                      <i class="fal fa-envelope-open"></i>
+                    </div> <!-- input box -->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input placeholder="Numéro" type="text">
+                      <i class="fal fa-phone"></i>
+                    </div> <!-- input box -->
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="input-box mt-30">
+                      <input placeholder="Sujet" type="text">
+                      <i class="fal fa-edit"></i>
+                    </div> <!-- input box -->
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="input-box mt-30">
+                      <textarea cols="30" id="#" name="#" placeholder="Message" rows="10"></textarea>
+                      <i class="fal fa-pencil"></i>
+                      <button class="main-btn wow slideInUp" data-wow-delay="0s" data-wow-duration="1.5s" type="submit">
+                        Envoyer <i class="fal fa-long-arrow-right"></i></button>
+                    </div> <!-- input box -->
+                  </div>
                 </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-details d-flex">
-                        <div class="contact-thumb wow slideInLeft" data-wow-duration=".5s" data-wow-delay="0s">
-                            <img src="assets/images/contact-man.png" alt="">
-                        </div>
-                        <div class="contact-form-area">
-                            <form action="#">
-                                <div class="input-title">
-                                    <h3 class="title">Remplissez les champs</h3>
-                                </div> <!-- input title -->
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input type="text" placeholder="Prénom & nom">
-                                            <i class="fal fa-user"></i>
-                                        </div> <!-- input box -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input type="email" placeholder="Email">
-                                            <i class="fal fa-envelope-open"></i>
-                                        </div> <!-- input box -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input type="text" placeholder="Numéro">
-                                            <i class="fal fa-phone"></i>
-                                        </div> <!-- input box -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="input-box mt-30">
-                                            <input type="text" placeholder="Sujet">
-                                            <i class="fal fa-edit"></i>
-                                        </div> <!-- input box -->
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <div class="input-box mt-30">
-                                            <textarea name="#" id="#" cols="30" rows="10" placeholder="Message"></textarea>
-                                            <i class="fal fa-pencil"></i>
-                                            <button class="main-btn wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s" type="submit">Envoyer <i class="fal fa-long-arrow-right"></i></button>
-                                        </div> <!-- input box -->
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div> <!-- contact details -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
+              </form>
+            </div>
+          </div> <!-- contact details -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div>
 </div>
 
 <div class="our-choose-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="section-title mt-30">
-                    <span>IPRES CSS</span>
-                    <h2 class="title">En quelques chiffres</h2>
-                </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-title mt-30">
+          <span>IPRES CSS</span>
+          <h2 class="title">En quelques chiffres</h2>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="our-choose-counter-area mt-30">
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <div class="our-choose-counter wow slideInUp" data-wow-delay="0s" data-wow-duration=".5s">
+                <sub><span class="counter">1000</span> <sup>+</sup></sub>
+                <span>Employeurs</span>
+                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
+              </div>
+              <div class="our-choose-counter wow slideInUp mt-55" data-wow-delay="0s" data-wow-duration="1s">
+                <sub><span class="counter">20000</span> <sup>+</sup></sub>
+                <span>Salariés</span>
+                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
+              </div>
             </div>
-            <div class="col-lg-6">
-                <div class="our-choose-counter-area mt-30">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6">
-                            <div class="our-choose-counter wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
-                                <sub><span class="counter">20000</span> <sup>+</sup></sub>
-                                <span>Employeurs</span>
-                                <!-- <p>Sed ut perspiciatis un  de omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
-                            </div>
-                            <div class="our-choose-counter wow slideInUp mt-55" data-wow-duration="1s" data-wow-delay="0s">
-                                <sub><span class="counter">100000</span> <sup>+</sup></sub>
-                                <span>Salariés</span>
-                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <div class="our-choose-counter wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                                <sub><span class="counter">100000</span> <sup>+</sup></sub>
-                                <span>Allocataire</span>
-                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
-                            </div>
-                            <div class="our-choose-counter wow slideInUp mt-55" data-wow-duration="2s" data-wow-delay="0s">
-                                <sub><span class="counter">36</span> <sup>+</sup></sub>
-                                <span>Agences</span>
-                                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
-                            </div>
-                        </div> <!-- our choose counter -->
-                    </div> <!-- row -->
-                </div>
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
+            <div class="col-md-6 col-sm-6">
+              <div class="our-choose-counter wow slideInUp" data-wow-delay="0s" data-wow-duration="1.5s">
+                <sub><span class="counter">356</span> <sup>+</sup></sub>
+                <span>Allocataire</span>
+                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
+              </div>
+              <div class="our-choose-counter wow slideInUp mt-55" data-wow-delay="0s" data-wow-duration="2s">
+                <sub><span class="counter">27</span> <sup></sup></sub>
+                <span>Agences</span>
+                <!-- <p>Sed ut perspiciatis unde omnis iste natus error sit voluptsantium doloremque laudantium</p> -->
+              </div>
+            </div> <!-- our choose counter -->
+          </div> <!-- row -->
+        </div>
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
 </div>
 
 <div class="latest-news-area gray-bg">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="section-title text-center">
+          <span>Blog</span>
+          <h2 class="title">Dernières publications</h2>
+        </div> <!-- sction title -->
+      </div>
+    </div> <!-- row -->
+  </div> <!-- container -->
+  <div class="letast-news-grid white-bg  ml-40 mr-40">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6">
-                <div class="section-title text-center">
-                    <span>Blog</span>
-                    <h2 class="title">Dernières publications</h2>
-                </div> <!-- sction title -->
-            </div>
-        </div> <!-- row -->
-    </div> <!-- container -->
-    <div class="letast-news-grid white-bg  ml-40 mr-40">
-        <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="latest-news">
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="latest-news">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration=".5s" data-wow-delay="0s">
-                                <div class="letest-news-item mt-30">
-                                    <span> Admin, 05 Aout 2020</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>Programe de logements sociaux</a></h4>
-                                    <p>La CSS a mis en place un programme immobilier de 345 logements sociaux sis à Bambilor...</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
-                                </div> <!-- lesast news item -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration="1s" data-wow-delay="0s">
-                                <div class="letest-news-item mt-30">
-                                    <span> Admin, 05 Aout 2020</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>Revalorisation allocations</a></h4>
-                                    <p>Revalorisation des allocations familliales et des rentes d’accidents du travail et de maladies professionnelles</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
-                                </div> <!-- lesast news item -->
-                            </div>
-                            <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                                <div class="letest-news-item mt-30">
-                                    <span> Admin, 05 Aout 2020</span>
-                                    <h4 class="title"><a routerLink='/blog-detail'>IPRES : Le choix de la proximité</a></h4>
-                                    <p>collaborateurs de l'institution, notre système de retraite par répartition est fondé sur le principe de solidarité entre les générations,</p>
-                                    <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
-                                </div> <!-- lesast news item -->
-                            </div>
-                        </div>
-                    </div> <!-- latest news -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </div>
+              <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0s" data-wow-duration=".5s">
+                <div class="letest-news-item mt-30">
+                  <span> Admin, 05 Aout 2020</span>
+                  <h4 class="title"><a routerLink='/blog-detail'>Programe de logements sociaux</a></h4>
+                  <p>La CSS a mis en place un programme immobilier de 345 logements sociaux sis à Bambilor...</p>
+                  <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
+                </div> <!-- lesast news item -->
+              </div>
+              <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0s" data-wow-duration="1s">
+                <div class="letest-news-item mt-30">
+                  <span> Admin, 05 Aout 2020</span>
+                  <h4 class="title"><a routerLink='/blog-detail'>Revalorisation allocations</a></h4>
+                  <p>Revalorisation des allocations familliales et des rentes d’accidents du travail et de maladies
+                    professionnelles</p>
+                  <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
+                </div> <!-- lesast news item -->
+              </div>
+              <div class="col-lg-4 col-md-6 wow slideInUp" data-wow-delay="0s" data-wow-duration="1.5s">
+                <div class="letest-news-item mt-30">
+                  <span> Admin, 05 Aout 2020</span>
+                  <h4 class="title"><a routerLink='/blog-detail'>IPRES : Le choix de la proximité</a></h4>
+                  <p>collaborateurs de l'institution, notre système de retraite par répartition est fondé sur le
+                    principe de solidarité entre les générations,</p>
+                  <a class="main-btn" routerLink='/blog-detail'>Lire plus <i class="fal fa-long-arrow-right"></i></a>
+                </div> <!-- lesast news item -->
+              </div>
+            </div>
+          </div> <!-- latest news -->
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div>
 </div>
 
 <app-footer></app-footer>
