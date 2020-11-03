@@ -85,6 +85,7 @@
                         name="email"
                         pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
                         [(ngModel)]="user.email"
+                        (blur)="checkEmail('email',user.email)"
                       />
                       <label>Email</label>
                       <i class="fal fa-envelope-open"></i>
@@ -99,6 +100,9 @@
                     >
                       L'email est obligatoire ou invalid
                     </div>
+                    <div class="error"   [class.show]="emailError != ''">
+                   {{emailError}}
+                  </div>
                   </div>
                   <div class="col-lg-6 mt-4">
                     <div class="input-box mt-30">
@@ -108,6 +112,7 @@
                         type="text"
                         name="login"
                         [(ngModel)]="user.login"
+                        (blur)="checklogin('login',user.login)"
                       />
                       <label>Nom d'utilisateur</label>
                       <i class="fal fa-user"></i>
@@ -122,6 +127,9 @@
                     >
                       Le nom d'utilisateur est obligatoire
                     </div>
+                    <div class="error"   [class.show]="loginError != ''">
+                      {{loginError}}
+                     </div>
                   </div>
                   <div class="col-lg-6 mt-4">
                     <div class="input-box mt-30">
@@ -176,7 +184,7 @@
                             [hl]="'fr'"
                             [(ngModel)]="user.recaptcha"
                             name="recaptcha"
-                            required>
+                            >
                     </ngx-recaptcha2>
                     <div
                     class="error"
@@ -203,6 +211,7 @@
                         data-wow-duration="1.5s"
                         data-wow-delay="0s"
                         type="submit" 
+                        [disabled] = "loginError != '' || emailError != ''"
                       >
                         S'inscrire <i class="fal fa-long-arrow-right"></i>
                       </button>

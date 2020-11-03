@@ -24,4 +24,7 @@ export class AuthService {
   getReseaux(){
     return this.http.get('/assets/jsons/reseauAgence.json').pipe(response => response);
   }
+  checkUser(data: any){
+    return this.http.post(environment.apiUrl+'account/check', data).pipe(response => response);
+  }
 }
