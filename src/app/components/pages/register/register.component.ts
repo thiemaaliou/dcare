@@ -21,6 +21,8 @@ export class RegisterComponent implements OnInit {
     {id: 'ALLOCATAIRE', name: "Allocataire"}
   ];
   user: Account = new Account();
+  emailError = "";
+  loginError = "";
   swalOpt = {
     title: '',
     text: '',
@@ -78,6 +80,46 @@ export class RegisterComponent implements OnInit {
          "Erreur"
        );
      });
+  }
+  checklogin(type,data) {
+    this.loginError = "";
+    if (this.user.login != '') {
+      let datas = {
+       'type':type,
+       'value':data
+      } 
+      this.authService.checkUser(datas).subscribe((resp) => {
+        if(resp['code'] == 200){
+          if(resp['exists'] == true){
+            this.loginError = "Le nom d'utilisateur existe déja";
+          }
+      }}, error => {
+        this.toastr.error(
+           "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier  réessayer plutard SVP",
+          "Erreur"
+        );
+      });
+   }
+  }
+  checkEmail(type,data) {
+    this.emailError = "";
+    if (this.user.email != '') {
+      let datas = {
+       'type':type,
+       'value':data
+      } 
+      this.authService.checkUser(datas).subscribe((resp) => {
+        if(resp['code'] == 200){
+          if(resp['exists'] == true){
+            this.emailError = "L'adresse email existe déja";
+          }
+      }}, error => {
+        this.toastr.error(
+           "Une erreur est survenue lors du traitement de la demande. Veuillez vérifier  réessayer plutard SVP",
+          "Erreur"
+        );
+      });
+   }
   }
 
   showTermesConditions(){
