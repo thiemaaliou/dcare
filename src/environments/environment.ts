@@ -8,7 +8,7 @@ export const environment = {
   appUrl: 'localhost:4200/',
   adminAppUrl:'https://online.secusociale.sn/cssipres/',
   appName: 'IPRES-CSS',
-  appHost: 'www.ipres-css.sn',
+  appHost: 'www.online.secusociale.sn',
   siteCapchatKey:  '6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1',
   siteSecretKey: '6Ld50NgZAAAAACrVoyYSwXBud8Wit5PsCqwcSho6',
   footerText: 'Copyright © CSS-IPRES'
