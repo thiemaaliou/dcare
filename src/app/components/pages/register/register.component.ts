@@ -17,8 +17,8 @@ export class RegisterComponent implements OnInit {
   displayTerms: boolean = false;
   accoutType = [
     {id: 'EMPLOYEUR', name: "Employeur"},
-    {id: 'EMPLOYE', name: "Employé"},
-    {id: 'ALLOCATAIRE', name: "Allocataire"}
+    {id: 'CABINET', name: "Cabinet"},
+   // {id: 'ALLOCATAIRE', name: "Allocataire"}
   ];
   user: Account = new Account();
   emailError = "";
