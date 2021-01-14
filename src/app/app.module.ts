@@ -27,6 +27,8 @@ import { SharedModule } from './shared/shared.module';
 
 import { NgxCaptchaModule } from 'ngx-captcha';
 import { AProposComponent } from './components/pages/apropos/apropos.component';
+import { AlphaNumericDirective } from './directive/alpha-numeric.directive';
+import { NoSpaceDirective } from './directive/no-space.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +42,9 @@ import { AProposComponent } from './components/pages/apropos/apropos.component';
     FocusDirective,
     ChangeInputDirective,
     PreloaderComponent,
-    AProposComponent
+    AProposComponent,
+    AlphaNumericDirective,
+    NoSpaceDirective
   ],
   imports: [
     BrowserModule,

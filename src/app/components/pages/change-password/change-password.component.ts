@@ -3,7 +3,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import {NgForm} from '@angular/forms';
 import { SwalComponent } from '@sweetalert2/ngx-sweetalert2';
 import { environment } from 'src/environments/environment';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 declare let $: any;
 
 @Component({
@@ -15,7 +15,7 @@ export class ChangePasswordComponent implements OnInit {
 
   state: number = 1;
   adminAppUrl: string = environment.adminAppUrl;
-  constructor(private authService: AuthService, private activatedRoute: ActivatedRoute) { }
+  constructor(private authService: AuthService, private activatedRoute: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -28,6 +28,7 @@ export class ChangePasswordComponent implements OnInit {
     this.authService.activateAccount(key).subscribe((resp) => {
       if(resp['code'] == 200){
         this.state = 2;
+        this.router.navigateByUrl(this.adminAppUrl);
       }else{
         this.state = 3;
       }

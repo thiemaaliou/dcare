@@ -4,13 +4,15 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://online.secusociale.sn/api/',
+  apiUrl: 'https://preprodonline.secusociale.sn/api/',
   appUrl: 'localhost:4200/',
-  adminAppUrl:'https://online.secusociale.sn/cssipres/',
-  appName: 'IPRES-CSS',
-  appHost: 'www.online.secusociale.sn',
-  siteCapchatKey:  '6Ld50NgZAAAAALfZ0DQRrpTGhGWaZgSEOVEdc0R1',
-  siteSecretKey: '6Ld50NgZAAAAACrVoyYSwXBud8Wit5PsCqwcSho6',
+  adminAppUrl:'https://preprodonline.secusociale.sn/cssipres/',
+  appName: 'CSS - IPRES',
+  appHost: 'www.preprodonline.secusociale.sn',
+  // siteCapchatKey: '6LfEKdgZAAAAAFQjO5GMof_Da0VCBv9LBTblsuqz',
+  siteCapchatKey: '6LfxD-IZAAAAACu05gfxKr_BKOrP0Wj62q5MnRay',
+  // siteSecretKey: '6LfEKdgZAAAAAAsZTmssEZwxNbW5iGwNRIO7D2-z',
+  siteSecretKey: '6LfxD-IZAAAAAHbG1qyui_SrzRX8ZfsCLAKKToUj',
   footerText: 'Copyright © CSS-IPRES'
 };
 

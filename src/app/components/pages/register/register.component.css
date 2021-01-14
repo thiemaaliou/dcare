@@ -1,4 +1,4 @@
-.page-title-area::after{
+.page-title-area::after {
   left: 0;
   top: 0;
   width: 100%;
@@ -7,17 +7,31 @@
   background: #0000009e;
   position: absolute;
 }
+
 .contact-us-area .contact-overlay {
-    background-color: rgb(26, 54, 101, 69%);
+  background-color: rgba(26, 54, 101, 69);
 }
-.container{
+
+.container {
   max-width: 1000px;
 }
-.custom-checkbox{
+
+.custom-checkbox {
   width: 25px !important;
 }
-.terms-href{
+
+.terms-href {
   color: orange !important;
   cursor: pointer;
   margin-left: 8px;
+}
+
+.notValid:disabled, #submitBTN:disabled, .notValid[disabled], #submitBTN[disabled] {
+  border: 1px solid #ccccc7 !important;
+  background-color: #cccccc !important;
+  color: #666665 !important;
+}
+
+.notValid:disabled, #submitBTN:disabled, .notValid[disabled], #submitBTN[disabled] :hover {
+  cursor: default;
 }
