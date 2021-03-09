@@ -34,7 +34,8 @@
               "src/assets/css/default.css",
               "src/assets/css/style.css",
               "src/styles.css",
-              "src/assets/css/general.css"
+              "src/assets/css/general.css",
+              "src/assets/css/responsive.scss"
             ],
             "scripts": [
               "src/assets/js/vendor/modernizr-3.6.0.min.js",

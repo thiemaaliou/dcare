@@ -32,3 +32,6 @@
 .nav-link.active{
   color: #f6931e !important;
 }
+.navbar-brand{
+  max-width: 200px;
+}

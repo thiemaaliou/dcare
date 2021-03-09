@@ -1,7 +1,0 @@
-p b{
-  color: orange;
-}
-.page-title-area::before{
-  background-image: url('../../../../../assets/images/formalite.jpg') !important;
-  background-size: 100% 130%;
-}

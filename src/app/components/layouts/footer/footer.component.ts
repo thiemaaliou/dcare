@@ -7,9 +7,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  appName: string = environment.appName;
-  appHost: string = environment.appHost;
-  footerText: any = environment.footerText;
+  footerText: any = 'Tous droits réservés D CARE AFRICA';
   constructor() { }
 
   ngOnInit(): void {

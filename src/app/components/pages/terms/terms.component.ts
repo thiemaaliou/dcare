@@ -7,8 +7,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./terms.component.css']
 })
 export class TermsComponent implements OnInit {
-  appName: string = environment.appName;
-  appHost: string = environment.appHost;
+  appName: string = 'D CARE AFRICA';
+  appHost: string = 'dcareafrica.org';
   section: string = 'css';
   public _display: boolean = false;
   @Output() closedTerms =  new EventEmitter<boolean>();

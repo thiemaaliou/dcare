@@ -12,11 +12,11 @@
     display: flex;
     align-items: center;
     // height: 900px;
-    background: linear-gradient(90deg, #1010108c 0%, rgb(27 26 26 / 53%) 50%, rgb(0 0 0 / 33%) 100%);
+    background: linear-gradient(360deg, #1515157d 0%, rgb(27 26 26 / 53%) 50%, rgb(0 0 0 / 33%) 100%);
     //background: linear-gradient(90deg, #f6931e 0%, rgb(255, 58, 23, 48%) 50%, rgba(255, 255, 255, 0) 100%);
 }
 .who-we-are-area .what-we-do-item a {
-    background: #ff3a18;
+    background: #A5539B;
   }
 
 .who-we-are-area .what-we-do-item > i {
@@ -44,4 +44,94 @@
     font-size: 20px;
     margin-top: 18px;
     font-style: italic;
+}
+.badge-content label{
+  position: relative !important;
+}
+.badge-content .badge{
+    padding: 10px 20px 5px 20px;
+    background: #A5539B;
+    font-size: 1.2em;
+    color: #fff;
+}
+.solution-play{
+    border-radius: 50%;
+    overflow: hidden;
+    border: 8px solid #6AB536;
+    width: 400px;
+    height: 400px;
+    box-sizing: border-box;
+    box-shadow: 0 0 30px #a5539b;
+    img{
+      height: 100%;
+      width: 100%;
+    }
+}
+.solution-area .solution-overlay {
+    background-color: rgb(235 235 237) !important;
+    padding-bottom: 65px !important;
+
+    p{
+      color: #000;
+    }
+    .title{
+      color: #6AB536;
+    }
+    .solution-content {
+       border-left: 5px solid rgb(177 6 209 / 85%);
+       padding: 40px 70px 50px;
+       margin-right: 70px;
+       border-radius: 5px;
+    }
+}
+.donate{
+  text-align: center;
+  padding: 100px 0 10px 0;
+  .title{
+    margin-bottom: 30px;
+    font-size: 55px;
+  }
+}
+.justify-center{
+  justify-content: center;
+}
+.mno-content{
+  padding: 10px 25px;
+  cursor: pointer;
+  img{
+    max-width: 115px;
+    max-height: 100px;
+    box-shadow: 0 0 5px #F2F2F2;
+    border-radius: 5px;
+  }
+}
+.form-section{
+  position: absolute;
+  bottom: 10%;
+  min-width: 500px;
+  right: 20px;
+}
+.donate-btn{
+  background: #6AB536;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 1.3em;
+  min-height: 50px;
+}
+.elm-input .donate-input{
+  padding: 10px 20px;
+  font-size: 1.3em;
+  min-height: 50px;
+  background-color: #ffffff5c;
+  border: 2px solid #F9F9F9;
+  color: #fff !important;
+}
+.amount-input{
+  padding: 10px 20px;
+  font-size: 1.3em;
+  min-height: 50px;
+  border: 2px solid #999;
+}
+.donate-input::placeholder {
+  color: #F9F9F9 !important;
 }

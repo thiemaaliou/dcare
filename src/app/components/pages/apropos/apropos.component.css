@@ -2,6 +2,6 @@ p b{
   color: orange;
 }
 .page-title-area::before{
-  background-image: url('../../../../assets/images/logo-ipres-css.jpg') !important;
+  background-image: url('../../../../assets/images/logo.png') !important;
   background-size: cover;
 }

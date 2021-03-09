@@ -103,7 +103,7 @@ p {
   font-size: 16px;
   font-weight: 400;
   line-height: 28px;
-  color: #81a3bb;
+  color: #A5539B;
   margin: 0px; }
 
 .bg_cover {
@@ -125,7 +125,7 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 2px solid #0c59db;
+  border: 2px solid #A5539B;
   padding: 0 55px;
   font-size: 16px;
   line-height: 60px;
@@ -153,7 +153,7 @@ p {
       color: #fff; }
 
 .section-title span {
-  color: #0c59db;
+  color: #A5539B;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1027,7 +1027,6 @@ PRELOADER
     content: '';
     height: 100%;
     width: 100%;
-    background-image: url(../images/banner-gradient-bg.png);
     top: 0;
     left: 0;
     background-size: cover;
@@ -2649,7 +2648,7 @@ PRELOADER
         color: #c1d0de; }
         .quote-area .quote-overlay .quote-form .input-box input::placeholder {
           opacity: 1;
-          color: #c1d0de; }
+          color: #fff; }
       .quote-area .quote-overlay .quote-form .input-box textarea {
         width: 100%;
         height: 200px;
@@ -2661,7 +2660,7 @@ PRELOADER
         resize: none; }
         .quote-area .quote-overlay .quote-form .input-box textarea::placeholder {
           opacity: 1;
-          color: #c1d0de; }
+          color: #fff; }
       .quote-area .quote-overlay .quote-form .input-box button {
         margin-top: 38px;
         border-radius: 0; }
@@ -3325,7 +3324,7 @@ PRELOADER
     color: #6b93aa; }
     .get-in-touch-area .form-area .input-box input::placeholder {
       opacity: 1;
-      color: #6b93aa; }
+      color: #fff; }
   .get-in-touch-area .form-area .input-box textarea {
     width: 100%;
     border: 1px solid #fff;
@@ -3336,7 +3335,7 @@ PRELOADER
     resize: none; }
     .get-in-touch-area .form-area .input-box textarea::placeholder {
       opacity: 1;
-      color: #6b93aa; }
+      color: #fff; }
   .get-in-touch-area .form-area .input-box button {
     border-radius: 0;
     margin-top: 20px;
@@ -4631,7 +4630,7 @@ PRELOADER
     font-size: 14px; }
     .shop-area .shop-sidebar-area .sidebar-subscribe .input-box input::placeholder {
       opacity: 1;
-      color: #7585af;
+      color: #fff;
       font-size: 14px; }
   .shop-area .shop-sidebar-area .sidebar-subscribe .input-box button {
     padding: 0;

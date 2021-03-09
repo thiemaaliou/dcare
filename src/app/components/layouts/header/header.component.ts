@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  adminAppUrl: string = environment.adminAppUrl;
   constructor(public router: Router) { }
 
   ngOnInit(): void {
