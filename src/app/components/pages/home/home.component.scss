@@ -135,3 +135,33 @@
 .donate-input::placeholder {
   color: #F9F9F9 !important;
 }
+@media screen and (max-width: 586px) and (min-width: 440px) {
+   .form-donate .col-xs-6{
+     width: 50% !important;
+
+   }
+   #donate-form{
+     right: 0 !important;
+     left: 10px;
+   }
+  .badge-content{
+       label{
+         padding-left: 10px;
+       }
+       .col-lg-6{
+         margin-bottom: 10px;
+       }
+    }
+}
+
+@media screen and (max-width: 439px) {
+   .form-donate .col-xs-6{
+     width: 80% !important;
+
+   }
+   #donate-form{
+     right: 0 !important;
+     left: 10px;
+     bottom: 3px !important;
+   }
+}

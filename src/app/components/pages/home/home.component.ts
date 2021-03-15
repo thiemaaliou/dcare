@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
        subTitle: "",
        description: "Ci soutoura",
        //description: "La plateforme NDAMLI CSS/IPRES vous offres la possibilité de faire toutes vos démarches en ligne en quelques clics seulement.",
-       img: "assets/images/bannieres-ipres-2.jpg",
+       img: "assets/images/banniere-2.jpg",
        //btnText: "En savoir plus",
        btnUrl: "/"
      },
@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit {
        description: "Des milions de personnes sont dans le besoin.",
 
        //description: "Créée le 1er Janvier 1956, la Caisse de Sécurité Sociale du Sénégal, par la loi n° 91-33 du 26 Juin 1991, est devenue depuis un organisme de droit privé chargé d'une mission de service public.",
-       img: "assets/images/bannieres-ipres-3.jpg",
+       img: "assets/images/banniere-3.jpg",
       // btnText: "En savoir plus",
        btnUrl: "/"
      },
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
        title: "Le don vient du coeur, non de la fortune...",
        subTitle: "Ci soutoura",
        description: "",
-       img: "assets/images/bannieres-ipres-1.jpg",
+       img: "assets/images/banniere-1.jpg",
      }
    ];
 
