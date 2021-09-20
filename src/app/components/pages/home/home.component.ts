@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
 
     logos = [
       {
-        mno: 'orange',
+        mno: 'SN_PM_OM',
         img: 'assets/images/om.png'
       },
       {
@@ -51,16 +51,41 @@ export class HomeComponent implements OnInit {
         img: 'assets/images/wave.png'
       },
       {
-        mno: 'visa',
+        mno: 'VISA',
         img: 'assets/images/visa.png'
       },
       {
-        mno: 'mastercard',
+        mno: 'MASTERCARD',
         img: 'assets/images/mastercard.png'
       }
     ];
 
     amount: number;
+
+    paymentType: string;
+
+    carPayment = {
+      montant: 200,
+      codeService: "BANK_PAYMENT",
+      numeroBeneficiaire: "",
+      idPartenaire: Math.floor(Date.now() / 1000),
+      card_number: "",
+      card_expire_year: "",
+      card_expire_month: "",
+      card_type: "",
+      card_cvc: "",
+      card_holder_name: "",
+      client_firstname: "",
+      client_lastname: "",
+    }
+
+    mobileMoneyFom = {
+      montant: 200,
+      codeService: "SN_PM_OM",
+      numeroBeneficiaire: "",
+      idPartenaire: Math.floor(Date.now() / 1000),
+    }
+    successPayment: boolean;
 
   constructor(private router: Router, private auth: AuthService) { }
 
@@ -100,6 +125,33 @@ export class HomeComponent implements OnInit {
      let sessionId = this.auth.encrypt(JSON.stringify(paymentData), environment.clientId);
      location.href = environment.paymentUrl+'?sessionId='+encodeURIComponent(sessionId)+'&salt='+environment.clientId;
 
+  }
+
+  setPaymentType(code: string){
+    this.paymentType = code;
+  }
+
+  donateCard(){
+    console.log(this.carPayment)
+    this.carPayment.card_type = this.paymentType;
+    this.carPayment.card_holder_name = this.carPayment.client_firstname+" "+this.carPayment.client_lastname;
+    this.auth.initCardPayment(this.carPayment).subscribe(resp => {
+      if(resp['errorCode'] == 200){
+        this.successPayment = true;
+      }else{
+        this.successPayment = false;
+      }
+    }, error => {this.successPayment = false;})
+  }
+
+  donateMobileMoney(){
+    this.auth.initCardPayment(this.mobileMoneyFom).subscribe(resp => {
+      if(resp['errorCode'] == 200){
+        this.successPayment = true;
+      }else{
+        this.successPayment = false;
+      }
+    }, error => {this.successPayment = false;})
   }
 
 }

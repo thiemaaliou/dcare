@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   assetsUrl: '/assets/',
-  apiUrl: 'https://api.bizao.com/',
+  apiUrl: 'https://api-boustane.cin-soft.com/api/dcare/',
   defaultToken: '8a75a891-e106-3e5e-8ddf-fb8756130002',
   webApiURL: 'https://webapi.bizao.com/',
   webApiToken: 'NTU1ZWJkM2M2MDkxZWNjMWMwNzRhNGM4ZjYzYzY2M2FzZWNyZXQuODU0MzcyYWUwMzRiODM0ZGFiMmIzZjUxNGI2OTYxNTA=',

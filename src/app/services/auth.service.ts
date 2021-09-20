@@ -29,6 +29,10 @@ export class AuthService {
     return this.http.post(environment.apiUrl+'account/check', data).pipe(response => response);
   }
 
+  initCardPayment(data: any){
+    return this.http.post(environment.apiUrl+'payment/request', data).pipe(response => response);
+  }
+
   get encryptMethodLength() {
        var encryptMethod = this.encryptMethod;
        // get only number from string.
