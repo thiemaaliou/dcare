@@ -69,14 +69,8 @@ export class HomeComponent implements OnInit {
       codeService: "BANK_PAYMENT",
       numeroBeneficiaire: "",
       idPartenaire: Math.floor(Date.now() / 1000),
-      card_number: "",
-      card_expire_year: "",
-      card_expire_month: "",
-      card_type: "",
-      card_cvc: "",
-      card_holder_name: "",
-      client_firstname: "",
-      client_lastname: "",
+      url_success: "https://paysen.com/success",
+      url_failed: "https://paysen.com/failed"
     }
 
     mobileMoneyFom = {
@@ -86,44 +80,26 @@ export class HomeComponent implements OnInit {
       idPartenaire: Math.floor(Date.now() / 1000),
     }
     successPayment: boolean;
+  newTab: Window;
 
   constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
 
-  donate(amount: number){
-    if(Number(amount) > 0)
-      this.processOrder(Number(amount));
-    else
-      return;
-  }
-
-  processOrder(amount: number){
-    var keyPhrase = ''+Math.floor(Date.now() / 1000);
-    let paymentData = {
-        "currency": "XOF",
-        "order_id": "SecureBizao_"+keyPhrase,
-        "amount": amount,
-        "state": "BizaoTest",
-        "reference": "secure_bizao_test",
-        "lang": "fr",
-        "client_id": environment.clientId,
-        "country": "sn",
-        "request_id": "SecureBizao_"+keyPhrase,
-        "return_url": environment.return_url,
-        "cancel_url": environment.cancel_url
-    };
+  processPayment(url: string){
 
     const dualScreenLeft = window.screenLeft !==  undefined ? window.screenLeft : window.screenX;
 
     const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-
+    const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
     const systemZoom = width / window.screen.availWidth;
-    const left = (width - 500) / 2 / systemZoom + dualScreenLeft;
+    const popupWidth = 650;
+    const left = (width - popupWidth) / 2 / systemZoom + dualScreenLeft;
 
-     let sessionId = this.auth.encrypt(JSON.stringify(paymentData), environment.clientId);
-     location.href = environment.paymentUrl+'?sessionId='+encodeURIComponent(sessionId)+'&salt='+environment.clientId;
+    this.newTab = window.open('', '_blank', 'toolbar=0, width='+popupWidth+', height='+height+', config=center left='+left);
+    this.newTab.location.href = url;
+
 
   }
 
@@ -132,12 +108,9 @@ export class HomeComponent implements OnInit {
   }
 
   donateCard(){
-    console.log(this.carPayment)
-    this.carPayment.card_type = this.paymentType;
-    this.carPayment.card_holder_name = this.carPayment.client_firstname+" "+this.carPayment.client_lastname;
     this.auth.initCardPayment(this.carPayment).subscribe(resp => {
       if(resp['errorCode'] == 200){
-        this.successPayment = true;
+        this.processPayment(resp['urlRedirection']);
       }else{
         this.successPayment = false;
       }

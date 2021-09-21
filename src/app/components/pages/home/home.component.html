@@ -23,12 +23,9 @@
             <form class="form-donate">
               <p class="text-white mb-4">La population vulnérable a besoin d'étre soutenue <br> et aidée par nous tous</p>
               <div class="row">
-                <div class="elm-input col-lg-7 col-md-7 col-sm-6 col-xs-6 mb-2">
-                  <input type="text" class="form-control amount donate-input mb-2" appNoSpace appAlphaNumeric [(ngModel)]="mobileMoneyFom.montant" name="amount" placeholder="Montant en CFA">
-                  <input type="text" class="form-control amount donate-input" appNoSpace appAlphaNumeric [(ngModel)]="mobileMoneyFom.numeroBeneficiaire" name="phone" placeholder="Numéro téléphone">
-                </div>
+
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6">
-                  <button type="submit" class="btn donate-btn" name="button" [swal]="donateSwal" [disabled]="!amount">Faire un don</button>
+                  <a type="submit" class="btn donate-btn" name="button" href="#donate">Faire un don</a>
                 </div>
               </div>
             </form>
@@ -110,7 +107,7 @@
         </div> <!-- what we do item -->
       </div>
     </div> <!-- row -->
-    <div class="row donate">
+    <div class="row donate" id="donate">
       <div class="col-lg-12">
         <h2 class="title">Faire un Don avec</h2>
       </div>
@@ -244,32 +241,6 @@
              </div>
              <form class="form-donate" #cardForm="ngForm">
              <div class="form-container">
-
-                 <div class="field-container">
-                     <label for="name">Prénom & Nom</label>
-                     <div class="input-group">
-                       <input class="w-50" name="firstname" maxlength="20" type="text" [(ngModel)]="carPayment.client_firstname" placeholder="Prénom">
-                       <input class="w-50" name="lastname" maxlength="20" type="text" [(ngModel)]="carPayment.client_lastname" placeholder="Nom">
-                     </div>
-
-                 </div>
-                 <div class="field-container">
-                     <label for="cardnumber">Numéro de carte</label>
-                     <input id="cardnumber" name="phone" type="number" pattern="[0-9]{16}" [(ngModel)]="carPayment.card_number" placeholder="Numéro de carte">
-
-                 </div>
-                 <div class="field-container">
-                     <label for="expirationdate">Expiration (mm/yy)</label>
-                     <div class="input-group">
-                       <input class="w-50" name="expiremonth" type="number"  [(ngModel)]="carPayment.card_expire_month" placeholder="10">
-                       <input class="w-50" name="expireyear" type="number"  [(ngModel)]="carPayment.card_expire_year" placeholder="21">
-                     </div>
-
-                 </div>
-                 <div class="field-container">
-                     <label for="securitycode">CVV</label>
-                     <input id="securitycode" name="cvv" type="number" pattern="[0-9]{3}"  [(ngModel)]="carPayment.card_cvc">
-                 </div>
                  <div class="field-container">
                      <label for="securitycode">Montant & Téléphone</label>
                      <div class="input-group">
